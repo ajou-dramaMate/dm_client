@@ -7,10 +7,26 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        r: "Pretendard-Regular",
+        m: "Pretendard-Medium",
+        sb: "Pretendard-SemiBold",
+        b: "Pretendard-Bold",
+      },
+      backgroundColor: {
+        brand: "var(--brand-color)",
+      },
+      textColor: {
+        brand: "var(--brand-color)",
+      },
+      borderColor: {
+        brand: "var(--brand-color)",
+      },
+      boxShadow: {
+        gray: "0px 2px 6px 0px rgba(0, 0, 0, 0.12)",
+        "t-gray": "0px -4px 8px 0px rgba(0, 0, 0, 0.12)",
+        "gray-sm": "0px 2px 4px 0px rgba(0, 0, 0, 0.06)",
+        modal: "0px 5px 12px 0px rgba(11, 10, 30, 0.18)",
       },
     },
   },
