@@ -1,7 +1,7 @@
 import BottomTabNav from "@components/bottomTabNav";
 import { useState } from "react";
 
-export default function Community() {
+export default function newPost() {
   const [isRecruit, setIsRecruit] = useState(false);
   const recruitCheckBoxChanged = (event) => {
     setIsRecruit(event.target.checked);
@@ -34,8 +34,8 @@ export default function Community() {
   ];
 
   return (
-    <div>
-      <form className="overflow-y-auto flex flex-col gap-[30px] px-[16px] pt-[50px] pb-[80px]">
+    <div className="overflow-y-auto flex flex-col gap-[30px] px-[16px] pt-[50px] pb-[80px]">
+      <form className="flex flex-col gap-[30px] px-[16px]">
         <div className="flex justify-end">
           <button className="bg-brand text-white rounded-[10px] py-[10px] px-[16px]">
             등록
@@ -60,18 +60,14 @@ export default function Community() {
           />
         </label>
         {isRecruit && (
-          <div className="flex flex-col gap-[8px]">
+          <div className="flex flex-col gap-[8px] bg-slate-300 py-[10px] px-[16px]">
             <div>
               <span>OTT 이름</span>
-              <ul className="pl-[16px] list-disc">
+              <ul className="p-[16px] list-disc">
                 {checkboxes.map((label, index) => (
                   <li
                     key={index}
-                    className={`flex justify-between items-center gap-[4px] ${
-                      index < checkboxes.length - 1
-                        ? "border-b border-gray-300"
-                        : ""
-                    } py-[8px]`}
+                    className="flex justify-between items-center gap-[4px] border-b border-gray-400 py-[8px]"
                   >
                     <span>{label}</span>
                     <input
@@ -85,8 +81,12 @@ export default function Community() {
             </div>
             <div>
               <span>모집 인원</span>
-              <button onClick={toggleDropdown} className="py-[3px] px-[5px]">
-                {`: ${selectedNumber ?? "인원을 정해 주세요"}`}
+              <button
+                type="button"
+                onClick={toggleDropdown}
+                className="py-[3px] px-[5px]"
+              >
+                {`: ${selectedNumber ? `${selectedNumber} 명` : "인원을 정해 주세요"}`}
                 <span>{isOpen ? "▲" : "▼"}</span>
               </button>
               {isOpen && (
@@ -97,7 +97,7 @@ export default function Community() {
                       onClick={() => handleNumberSelect(number)}
                       className="cursor-pointer"
                     >
-                      {number}
+                      {number} 명
                     </li>
                   ))}
                 </ul>
