@@ -1,6 +1,6 @@
 import BottomTabNav from "@components/bottomTabNav";
 import PostItem from "@components/postItem";
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Community() {
   return (
@@ -12,7 +12,10 @@ export default function Community() {
         <button className="bg-brand text-white rounded-[10px] py-[10px] px-[16px]">
           모집
         </button>
-        <Link href={"/newPost"} className="bg-brand text-white rounded-[10px] py-[10px] px-[16px] ml-auto">
+        <Link
+          href={"/newPost"}
+          className="bg-brand text-white rounded-[10px] py-[10px] px-[16px] ml-auto"
+        >
           글 등록
         </Link>
       </div>

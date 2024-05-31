@@ -1,4 +1,4 @@
-export default function ReviewItem() {
+export default function CommentItem() {
   return (
     <div className="flex flex-col gap-[4px] bg-slate-200 py-[10px] px-[16px]">
       <span>댓글 내용</span>
