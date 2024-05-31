@@ -1,7 +1,7 @@
 import BottomTabNav from "@components/bottomTabNav";
 import { useState } from "react";
 
-export default function newPost() {
+export default function NewPost() {
   const [isRecruit, setIsRecruit] = useState(false);
   const recruitCheckBoxChanged = (event) => {
     setIsRecruit(event.target.checked);
@@ -86,7 +86,9 @@ export default function newPost() {
                 onClick={toggleDropdown}
                 className="py-[3px] px-[5px]"
               >
-                {`: ${selectedNumber ? `${selectedNumber} 명` : "인원을 정해 주세요"}`}
+                {`: ${
+                  selectedNumber ? `${selectedNumber} 명` : "인원을 정해 주세요"
+                }`}
                 <span>{isOpen ? "▲" : "▼"}</span>
               </button>
               {isOpen && (
