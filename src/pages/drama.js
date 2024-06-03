@@ -1,7 +1,59 @@
+import axiosInstance from "@api/axiosInstance";
 import BottomTabNav from "@components/bottomTabNav";
 import DramaItem from "@components/dramaItem";
+import { useEffect, useState } from "react";
+
+export const DRAMA_DATA = [
+  {
+    dramaId: 0,
+    title: "드라마1",
+    image: "",
+    like: true,
+  },
+  {
+    dramaId: 1,
+    title: "드라마2",
+    image: "",
+    like: false,
+  },
+  {
+    dramaId: 2,
+    title: "드라마3",
+    image: "",
+    like: false,
+  },
+  {
+    dramaId: 3,
+    title: "드라마4",
+    image: "",
+    like: false,
+  },
+  {
+    dramaId: 4,
+    title: "드라마5",
+    image: "",
+    like: true,
+  },
+];
 
 export default function Drama() {
+  const [dramaList, setDramaList] = useState([]);
+
+  const getDrama = async () => {
+    try {
+      const res = await axiosInstance.get(`/api/api/v1/drama`);
+      console.log(`drama`, res);
+      // setDramaList(res.data);
+      setDramaList(DRAMA_DATA);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  useEffect(() => {
+    getDrama();
+  }, []);
+
   return (
     <div className="overflow-y-auto flex flex-col gap-[30px] px-[16px] pt-[50px] pb-[80px]">
       <form className="relative">
@@ -15,20 +67,9 @@ export default function Drama() {
         </button>
       </form>
       <div className="grid grid-cols-3 justify-items-center gap-y-[16px]">
-        <DramaItem />
-        <DramaItem />
-        <DramaItem />
-        <DramaItem />
-        <DramaItem />
-        <DramaItem />
-        <DramaItem />
-        <DramaItem />
-        <DramaItem />
-        <DramaItem />
-        <DramaItem />
-        <DramaItem />
-        <DramaItem />
-        <DramaItem />
+        {dramaList.map((v) => (
+          <DramaItem key={v.dramaId} item={v} />
+        ))}
       </div>
 
       <div className="absolute bottom-0 left-0 w-full z-10">
