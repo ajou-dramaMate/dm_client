@@ -1,10 +1,11 @@
-export default function ReviewItem() {
+export default function ReviewItem({ item }) {
   return (
     <div className="flex flex-col gap-[4px] bg-slate-200 py-[10px] px-[16px]">
-      <span>리뷰 내용</span>
+      <span>{item.contents}</span>
       <div className="flex gap-[4px] text-[1.4rem] font-m">
-        <span>작성자</span>
-        <span>작성일</span>
+        <span>{item.name}</span>
+        <span>{item.date}</span>
+        <span>{item.star}</span>
       </div>
     </div>
   );
