@@ -50,7 +50,41 @@ export default function Drama() {
     }
   };
 
+  const putDramaData = async () => {
+    const dramas = require("/public/json/drama.json");
+    const promises = dramas.data.map(async (v) => {
+      const {
+        title,
+        member,
+        summary,
+        year,
+        age,
+        information,
+        image,
+        genre,
+        ott,
+      } = v;
+      return await fetch(`/api/api/v1/drama`, {
+        method: "POST",
+        body: JSON.stringify({
+          title,
+          member,
+          summary,
+          year,
+          age,
+          information,
+          image,
+          genre: genre.split(", "),
+          ott: ott.split(", "),
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
+    });
+    await Promise.all(promises);
+  };
+
   useEffect(() => {
+    // putDramaData();
     getDrama();
   }, []);
 
