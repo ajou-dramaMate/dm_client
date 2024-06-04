@@ -1,3 +1,4 @@
+import axiosInstance from "@api/axiosInstance";
 import BottomTabNav from "@components/bottomTabNav";
 import ReviewItem from "@components/reviewItem";
 import { useRouter } from "next/router";
@@ -48,6 +49,15 @@ export default function DramaDetail() {
   console.log(dramaId);
   const [detail, setDetail] = useState(null);
 
+  const handleLike = async () => {
+    try {
+      const res = await axiosInstance.post(`/api/api/v1/drama/like/${dramaId}`);
+      console.log(`drama like`, res);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   const convertGenreString = (arr) => {
     return arr.map((v) => GENRE_OPTION[v]).join(", ");
   };
@@ -85,6 +95,9 @@ export default function DramaDetail() {
             <span>시청가능 연령: {detail?.age}</span>
             <span>드라마 장르: {convertGenreString(detail?.genre ?? [])}</span>
             <span>회차정보: {detail?.information}</span>
+            <button type="button" onClick={handleLike}>
+              찜
+            </button>
           </div>
         </div>
       </div>
