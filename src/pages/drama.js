@@ -41,10 +41,13 @@ export default function Drama() {
 
   const getDrama = async () => {
     try {
-      const res = await axiosInstance.get(`/api/api/v1/drama`);
-      console.log(`drama`, res);
-      // setDramaList(res.data);
-      setDramaList(DRAMA_DATA);
+      // const res = await axiosInstance.get(`/api/api/v1/drama`);
+      // console.log(`drama`, res);
+      const res = await fetch(`/api/api/v1/drama`);
+      const json = await res.json();
+      console.log(`drama`, json);
+      setDramaList(json);
+      // setDramaList(DRAMA_DATA);
     } catch (e) {
       console.log(e);
     }
