@@ -37,9 +37,15 @@ export default function Ott() {
 
   const getDramaLike = async () => {
     try {
-      const res = await axiosInstance.get(`/api/api/v1/drama/like`);
+      // const res = await axiosInstance.get(`/api/api/v1/drama/like`);
+      const res = await fetch(`/api/api/v1/drama/like`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      });
       console.log(`drama like`, res);
-      setDramaList(res.data);
+      const json = await res.json();
+      setDramaList(json);
     } catch (e) {
       console.log(e);
     }
@@ -47,7 +53,13 @@ export default function Ott() {
 
   const putOTTData = async () => {
     try {
-      const res = await fetch(`/api/api/v1/ott`, { method: "POST" });
+      const res = await fetch(`/api/api/v1/ott`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          "Content-Type": "application/json",
+        },
+      });
       console.log(`put ott`, res);
     } catch (e) {
       console.log(e);

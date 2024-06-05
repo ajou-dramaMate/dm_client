@@ -46,7 +46,7 @@ export default function Drama() {
       const res = await fetch(`/api/api/v1/drama`);
       const json = await res.json();
       console.log(`drama`, json);
-      setDramaList(json);
+      setDramaList(json.content);
       // setDramaList(DRAMA_DATA);
     } catch (e) {
       console.log(e);
@@ -80,7 +80,10 @@ export default function Drama() {
           genre: genre.split(", "),
           ott: ott.split(", "),
         }),
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          "Content-Type": "application/json",
+        },
       });
     });
     await Promise.all(promises);
