@@ -88,7 +88,7 @@ export default function DramaDetail() {
   }, []);
 
   return (
-    <div className="overflow-y-auto flex flex-col gap-[30px] px-[16px] pb-[80px]">
+    <div className="overflow-y-auto flex flex-col gap-[20px] px-[16px] pb-[80px]">
       <div className="py-[10px]">
         <Image
           alt="뒤로가기"
@@ -105,7 +105,7 @@ export default function DramaDetail() {
           <img
             alt="포스터"
             src={`data:image/png;base64,${detail?.image}`}
-            className="w-[150px] h-[210px] bg-slate-200"
+            className="w-[150px] h-[210px] bg-slate-200 rounded-[6px]"
           />
         </div>
 
@@ -131,27 +131,34 @@ export default function DramaDetail() {
           </div>
 
           <div className="flex justify-between items-center">
-            <div className="flex gap-[4px] items-center">
-              {Array.from({ length: Math.round(detail?.star) }).map((_, i) => (
-                <Image
-                  key={i}
-                  alt=""
-                  src={require("@images/star-brand.svg")}
-                  width={22}
-                  height={21}
-                />
-              ))}
-              {Array.from({ length: 5 - Math.round(detail?.star) }).map(
-                (_, i) => (
-                  <Image
-                    key={5 - i}
-                    alt=""
-                    src={require("@images/star-gray.svg")}
-                    width={22}
-                    height={21}
-                  />
-                )
-              )}
+            <div className="flex gap-[6px] items-center">
+              <div className="flex gap-[4px] items-center">
+                {Array.from({ length: Math.round(detail?.star) }).map(
+                  (_, i) => (
+                    <Image
+                      key={i}
+                      alt=""
+                      src={require("@images/star-orange.svg")}
+                      width={22}
+                      height={21}
+                    />
+                  )
+                )}
+                {Array.from({ length: 5 - Math.round(detail?.star) }).map(
+                  (_, i) => (
+                    <Image
+                      key={5 - i}
+                      alt=""
+                      src={require("@images/star-gray.svg")}
+                      width={22}
+                      height={21}
+                    />
+                  )
+                )}
+              </div>
+              <span className="font-m text-[#FF823C] text-[1.4rem]">
+                {detail?.star}
+              </span>
             </div>
 
             <Image
@@ -173,7 +180,7 @@ export default function DramaDetail() {
         {detail?.summary}
       </span>
 
-      <div className="flex flex-col gap-[4px]">
+      <div className="flex flex-col gap-[20px]">
         {detail?.review.map((v) => (
           <ReviewItem key={`${Math.random()}`} item={v} />
         ))}
