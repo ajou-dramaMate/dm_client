@@ -1,4 +1,4 @@
-import axiosInstance from "@api/axiosInstance";
+import Image from "next/image";
 import BottomTabNav from "@components/bottomTabNav";
 import ReviewItem from "@components/reviewItem";
 import { useRouter } from "next/router";
@@ -59,8 +59,7 @@ export default function DramaDetail() {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
       });
-      const json = await res.json();
-      console.log(`drama like`, json);
+      console.log(`drama like`, res);
     } catch (e) {
       console.log(e);
     }
@@ -86,7 +85,18 @@ export default function DramaDetail() {
   }, []);
 
   return (
-    <div className="overflow-y-auto flex flex-col gap-[30px] px-[16px] pt-[50px] pb-[80px]">
+    <div className="overflow-y-auto flex flex-col gap-[30px] px-[16px] pb-[80px]">
+      <div className="py-[10px]">
+        <Image
+          alt="뒤로가기"
+          src={require("@images/chevron_left-gray.svg")}
+          width={24}
+          height={24}
+          onClick={() => router.back()}
+          className="cursor-pointer"
+        />
+      </div>
+
       <div className="flex gap-[20px]">
         <div className="flex flex-col gap-[8px]">
           <img
@@ -120,20 +130,29 @@ export default function DramaDetail() {
         ))}
       </div>
 
-      <form className="relative flex flex-col gap-[4px] py-[10px] pl-[16px] pr-[50px] bg-slate-300">
-        <input
-          className="py-[3px] px-[5px]"
-          type="text"
-          placeholder="리뷰를 작성해 주세요."
-        />
-        <div className="flex gap-[2px]">별점</div>
-        <button className="absolute top-1/2 -translate-y-1/2 right-[16px]">
-          등록
-        </button>
-      </form>
-
-      <div className="absolute bottom-0 left-0 w-full z-10">
-        <BottomTabNav />
+      <div className="absolute bottom-0 left-0 w-full z-20">
+        <div className="bg-white pt-[8px] pb-[18px] px-[16px]">
+          <button
+            className="w-full bg-brand h-[43px] rounded-[10px] flex gap-[8px] items-center justify-center"
+            onClick={() =>
+              router.push({
+                pathname: "/reviewWrite",
+                query: { dramaId, title: detail?.title },
+              })
+            }
+          >
+            <Image
+              alt=""
+              src={require("@images/pencil-white.svg")}
+              width={16}
+              height={16}
+              priority
+            />
+            <span className="text-white font-[Pretendard-SemiBold]">
+              리뷰 쓰기
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   );
