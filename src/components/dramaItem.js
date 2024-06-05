@@ -5,7 +5,7 @@ export default function DramaItem({ item }) {
     <Link
       href={{
         pathname: "/dramaDetail",
-        query: { dramaId: item.dramaId },
+        query: { dramaId: item.dramaId, like: item.like },
       }}
       as={"/dramaDetail"}
     >
