@@ -1,9 +1,7 @@
 import axiosInstance from "@api/axiosInstance";
 import BottomTabNav from "@components/bottomTabNav";
-import DramaItem from "@components/dramaItem";
 import OttItem from "@components/ottItem";
 import { useEffect, useState } from "react";
-import { DRAMA_DATA } from "./drama";
 import DramaRecommItem from "@components/dramaRecommItem";
 
 export const MAX_SELECT_CNT = 3;
@@ -21,35 +19,43 @@ export default function Ott() {
   const [selectedIds, setSelectedIds] = useState([]);
   const [ottList, setOttList] = useState([]);
 
-  const getDramaLike = async () => {
-    try {
-      // const res = await axiosInstance.get(`/api/api/v1/drama/like`);
-      // console.log(`drama/like`, res);
-      // setDramaList(res.data);
-      setDramaList(DRAMA_DATA);
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
   const handleRecomm = async () => {
     if (selectedIds.length < 3) {
       alert("보고 싶은 드라마를 3개 선택해 주세요.");
       return;
     }
     try {
-      // const res = await axiosInstance.get(
-      //   `/api/api/v1/ott/${selectedIds[0]}/${selectedIds[1]}/${selectedIds[2]}`
-      // );
-      // console.log(`ott recomm`, res);
-      // setOttList(res.data);
-      setOttList(OTT_DATA);
+      const res = await axiosInstance.get(
+        `/api/api/v1/ott/${selectedIds[0]}/${selectedIds[1]}/${selectedIds[2]}`
+      );
+      console.log(`ott recomm`, res);
+      setOttList(res.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const getDramaLike = async () => {
+    try {
+      const res = await axiosInstance.get(`/api/api/v1/drama/like`);
+      console.log(`drama like`, res);
+      setDramaList(res.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const putOTTData = async () => {
+    try {
+      const res = await fetch(`/api/api/v1/ott`, { method: "POST" });
+      console.log(`put ott`, res);
     } catch (e) {
       console.log(e);
     }
   };
 
   useEffect(() => {
+    // putOTTData();
     getDramaLike();
   }, []);
 
