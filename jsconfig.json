@@ -3,7 +3,8 @@
     "paths": {
       "@images/*": ["./public/images/*"],
       "@components/*": ["./src/components/*"],
-      "@api/*": ["./src/api/*"]
+      "@api/*": ["./src/api/*"],
+      "@hooks/*": ["./src/hooks/*"]
     }
   }
 }

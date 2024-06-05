@@ -45,11 +45,13 @@ export const GENRE_OPTION = {
 
 export default function DramaDetail() {
   const router = useRouter();
-  const { dramaId } = router.query;
+  const { dramaId, like } = router.query;
   console.log(dramaId);
   const [detail, setDetail] = useState(null);
+  const [isLike, setIsLike] = useState(like);
 
   const handleLike = async () => {
+    setIsLike((prev) => !prev);
     try {
       // const res = await axiosInstance.post(`/api/api/v1/drama/like/${dramaId}`);
       // console.log(`drama like`, res);
@@ -57,6 +59,7 @@ export default function DramaDetail() {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          "Content-Type": "application/json",
         },
       });
       console.log(`drama like`, res);
@@ -85,7 +88,7 @@ export default function DramaDetail() {
   }, []);
 
   return (
-    <div className="overflow-y-auto flex flex-col gap-[30px] px-[16px] pb-[80px]">
+    <div className="overflow-y-auto flex flex-col gap-[20px] px-[16px] pb-[80px]">
       <div className="py-[10px]">
         <Image
           alt="뒤로가기"
@@ -97,34 +100,87 @@ export default function DramaDetail() {
         />
       </div>
 
-      <div className="flex gap-[20px]">
-        <div className="flex flex-col gap-[8px]">
+      <div className="flex gap-[16px]">
+        <div className="flex flex-col gap-[8px] shrink-0">
           <img
             alt="포스터"
             src={`data:image/png;base64,${detail?.image}`}
-            className="w-[150px] h-[210px] bg-slate-200"
+            className="w-[150px] h-[210px] bg-slate-200 rounded-[6px]"
           />
         </div>
-        <div className="flex flex-col gap-[8px]">
-          <div className="flex flex-col gap-[4px]">
-            <span className="font-b text-[1.8rem]">{detail?.title}</span>
-            <span>별점 {detail?.star}</span>
+
+        <div className="flex flex-col justify-between">
+          <div className="flex flex-col gap-[8px]">
+            <div className="flex flex-col gap-[4px]">
+              <span className="font-b text-[1.8rem]">{detail?.title}</span>
+              <div className="flex gap-[4px] items-center text-[1.3rem] text-[#7F828C]">
+                <span>{detail?.year}</span>
+                <span>·</span>
+                <span>{detail?.information}</span>
+                <span>·</span>
+                <span>{detail?.age}이상 시청가</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-[7px] text-[1.4rem]">
+              <span className="text-[#7F828C]">
+                {convertGenreString(detail?.genre ?? [])}
+              </span>
+              <span className="text-[#3B3F4A]">출연진: {detail?.member}</span>
+            </div>
           </div>
-          <div className="flex flex-col gap-[3px] text-[1.4rem]">
-            <span>출연진: {detail?.member}</span>
-            <span>제작년도: {detail?.year}</span>
-            <span>시청가능 연령: {detail?.age}</span>
-            <span>드라마 장르: {convertGenreString(detail?.genre ?? [])}</span>
-            <span>회차정보: {detail?.information}</span>
-            <button type="button" onClick={handleLike}>
-              찜
-            </button>
+
+          <div className="flex justify-between items-center">
+            <div className="flex gap-[6px] items-center">
+              <div className="flex gap-[4px] items-center">
+                {Array.from({ length: Math.round(detail?.star) }).map(
+                  (_, i) => (
+                    <Image
+                      key={i}
+                      alt=""
+                      src={require("@images/star-orange.svg")}
+                      width={22}
+                      height={21}
+                    />
+                  )
+                )}
+                {Array.from({ length: 5 - Math.round(detail?.star) }).map(
+                  (_, i) => (
+                    <Image
+                      key={5 - i}
+                      alt=""
+                      src={require("@images/star-gray.svg")}
+                      width={22}
+                      height={21}
+                    />
+                  )
+                )}
+              </div>
+              <span className="font-m text-[#FF823C] text-[1.4rem]">
+                {detail?.star}
+              </span>
+            </div>
+
+            <Image
+              alt="찜하기"
+              src={
+                isLike
+                  ? require("@images/like-orange.svg")
+                  : require("@images/like-gray.svg")
+              }
+              width={32}
+              height={32}
+              onClick={handleLike}
+              className=" cursor-pointer"
+            />
           </div>
         </div>
       </div>
-      <span className="text-justify">{detail?.summary}</span>
+      <span className="text-justify text-[#3B3F4A] text-[1.5rem]">
+        {detail?.summary}
+      </span>
 
-      <div className="flex flex-col gap-[4px]">
+      <div className="flex flex-col gap-[20px]">
         {detail?.review.map((v) => (
           <ReviewItem key={`${Math.random()}`} item={v} />
         ))}
