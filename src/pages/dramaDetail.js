@@ -51,8 +51,16 @@ export default function DramaDetail() {
 
   const handleLike = async () => {
     try {
-      const res = await axiosInstance.post(`/api/api/v1/drama/like/${dramaId}`);
-      console.log(`drama like`, res);
+      // const res = await axiosInstance.post(`/api/api/v1/drama/like/${dramaId}`);
+      // console.log(`drama like`, res);
+      const res = await fetch(`/api/api/v1/drama/like/${dramaId}`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      });
+      const json = await res.json();
+      console.log(`drama like`, json);
     } catch (e) {
       console.log(e);
     }
