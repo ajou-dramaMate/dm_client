@@ -1,11 +1,14 @@
 import axiosInstance from "@api/axiosInstance";
 import BottomTabNav from "@components/bottomTabNav";
 import DramaItem from "@components/dramaItem";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 export default function My() {
   const [loading, setLoading] = useState(false);
   const [dramaList, setDramaList] = useState([]);
+  const [user, setUser] = useState(null);
+  const router = useRouter();
 
   const getDramaLike = async () => {
     try {
@@ -26,21 +29,48 @@ export default function My() {
     }
   };
 
+  const getUser = async () => {
+    try {
+      const res = await fetch(`/api/api/v1/login/user`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      });
+      console.log(`user`, res);
+      const json = await res.json();
+      setUser(json);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   useEffect(() => {
+    getUser();
     getDramaLike();
   }, []);
 
+  const handleLogout = () => {
+    if (confirm("정말 로그아웃 하시겠습니까?")) {
+      localStorage.removeItem("accessToken");
+      localStorage.removeItem("refreshToken");
+      router.push("/");
+    }
+  };
+
   return (
     <div className="overflow-y-auto flex flex-col gap-[30px] px-[16px] pt-[50px] pb-[80px]">
-      <span className="text-[1.8rem] font-b">00님 안녕하세요.</span>
+      <span className="text-[1.8rem] font-b">{user?.name}님 안녕하세요!</span>
 
       <div className="flex flex-col gap-[8px]">
         <span className="font-m">개인정보</span>
-        <div className="flex flex-col gap-[4px] bg-slate-300 py-[10px] px-[16px]">
-          <span>아이디: admin123</span>
-          <span>닉네임: 00</span>
+        <div className="flex flex-col gap-[4px] bg-[#2d1f720d] py-[10px] px-[16px]">
+          <span>닉네임: {user?.name}</span>
+          <span>이메일: {user?.email}</span>
         </div>
-        <button className="bg-slate-400 py-[5px] w-full rounded-[5px]">
+        <button
+          className="h-[43px] rounded-[10px] bg-slate-300 py-[5px] w-full text-white font-sb"
+          onClick={handleLogout}
+        >
           로그아웃
         </button>
       </div>

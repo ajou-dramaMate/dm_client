@@ -44,11 +44,12 @@ export const GENRE_OPTION = {
 };
 
 export default function DramaDetail() {
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const { dramaId, like } = router.query;
   console.log(dramaId);
   const [detail, setDetail] = useState(null);
-  const [isLike, setIsLike] = useState(like);
+  const [isLike, setIsLike] = useState(like === "false" ? false : true);
 
   const handleLike = async () => {
     setIsLike((prev) => !prev);
@@ -74,12 +75,15 @@ export default function DramaDetail() {
 
   const getDramaDetail = async () => {
     try {
+      setLoading(true);
       const res = await fetch(`/api/api/v1/drama/${dramaId}`);
       const json = await res.json();
       console.log(`drama detail`, json);
       setDetail(json);
     } catch (e) {
       console.log(e);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -109,7 +113,7 @@ export default function DramaDetail() {
           />
         </div>
 
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between w-full">
           <div className="flex flex-col gap-[8px]">
             <div className="flex flex-col gap-[4px]">
               <span className="font-b text-[1.8rem]">{detail?.title}</span>
@@ -176,14 +180,26 @@ export default function DramaDetail() {
           </div>
         </div>
       </div>
-      <span className="text-justify text-[#3B3F4A] text-[1.5rem]">
-        {detail?.summary}
-      </span>
 
-      <div className="flex flex-col gap-[20px]">
-        {detail?.review.map((v) => (
-          <ReviewItem key={`${Math.random()}`} item={v} />
-        ))}
+      {loading ? (
+        <div className="w-full pt-[30px] flex justify-center items-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-brand" />
+        </div>
+      ) : (
+        <span className="text-justify text-[#3B3F4A] text-[1.5rem]">
+          {detail?.summary}
+        </span>
+      )}
+
+      <div className="flex flex-col gap-[10px]">
+        <span className="font-b text-[#212121]">
+          리뷰 <span className="text-brand">{detail?.review.length}</span>
+        </span>
+        <div className="flex flex-col gap-[20px]">
+          {detail?.review.map((v) => (
+            <ReviewItem key={`${Math.random()}`} item={v} />
+          ))}
+        </div>
       </div>
 
       <div className="absolute bottom-0 left-0 w-full z-20">
