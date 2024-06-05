@@ -10,7 +10,11 @@ export default function DramaItem({ item }) {
       as={"/dramaDetail"}
     >
       <div className="flex flex-col gap-[8px] items-center">
-        <div className="w-[100px] h-[140px] bg-slate-200"></div>
+        <img
+          alt="포스터"
+          src={`data:image/png;base64,${item.image}`}
+          className="w-[100px] h-[140px] bg-slate-200"
+        />
         <span>{item.title}</span>
       </div>
     </Link>
