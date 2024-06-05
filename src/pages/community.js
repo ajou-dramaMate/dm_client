@@ -12,6 +12,7 @@ export default function Community() {
       const data = await response.json();
       console.log(data);
       setPosts(data);
+      setPosts(data.sort((a, b) => b.communityId - a.communityId));
     } catch (error) {
       console.error(error);
     }

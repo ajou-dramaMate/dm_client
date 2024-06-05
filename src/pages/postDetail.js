@@ -23,6 +23,7 @@ export default function PostDetail() {
       console.log(data);
       setPost(data);
       setComments(data.comments);
+      setComments(data.comments.sort((a, b) => a.id - b.id));
     } catch (error) {
       console.error(error);
     }
@@ -81,7 +82,7 @@ export default function PostDetail() {
 
       <div className="flex flex-col gap-[4px]">
         {comments.map((comment) => (
-          <CommentItem key={`${Math.random()}`} comment={comment} />
+          <CommentItem key={comment.id} comment={comment} />
         ))}
       </div>
 
@@ -99,6 +100,8 @@ export default function PostDetail() {
         <button
           type="submit"
           className="absolute top-1/2 -translate-y-1/2 right-[16px]"
+          onChange={handleCommentSubmit}
+          disabled={commentText.length === 0}
         >
           등록
         </button>
