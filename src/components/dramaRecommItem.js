@@ -20,13 +20,18 @@ export default function DramaRecommItem({ item, selectedIds, setSelectedIds }) {
       className={`flex flex-col gap-[8px] items-center`}
       onClick={handleClick}
     >
-      <img
-        alt="포스터"
-        src={`data:image/png;base64,${item.image}`}
-        className={`w-[100px] h-[140px] bg-slate-200 rounded-[6px] ${
-          selectedIds.includes(item.dramaId) ? "border-2 border-brand" : ""
-        }`}
-      />
+      <div className="relative">
+        <img
+          alt="포스터"
+          src={`data:image/png;base64,${item.image}`}
+          className={`w-[100px] h-[140px] bg-slate-200 rounded-[6px]`}
+        />
+        {selectedIds.includes(item.dramaId) && (
+          <div className="absolute top-0 left-0 w-full h-full rounded-[6px] bg-black/50 flex justify-center items-center">
+            <span className="text-[3rem]">✅</span>
+          </div>
+        )}
+      </div>
       <span>{item.title}</span>
     </button>
   );

@@ -109,7 +109,7 @@ export default function Ott() {
         </div>
       )}
       <button
-        className="w-full bg-brand h-[43px] rounded-[10px] flex gap-[8px] items-center justify-center disabled:bg-slate-300"
+        className="w-full bg-brand h-[43px] rounded-[10px] flex gap-[8px] items-center justify-center disabled:bg-slate-300 shrink-0"
         onClick={handleRecomm}
         disabled={selectedIds.length < MAX_SELECT_CNT}
       >
