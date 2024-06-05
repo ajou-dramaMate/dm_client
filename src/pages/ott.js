@@ -124,9 +124,7 @@ export default function Ott() {
               height={20}
               priority
             />
-            <span className="text-white font-[Pretendard-SemiBold]">
-              OTT 추천받기
-            </span>
+            <span className="text-white font-sb">OTT 추천받기</span>
           </>
         )}
       </button>
