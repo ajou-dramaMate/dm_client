@@ -15,6 +15,7 @@ export const OTT_DATA = [
 ];
 
 export default function Ott() {
+  const [loading, setLoading] = useState(false);
   const [dramaList, setDramaList] = useState([]);
   const [selectedIds, setSelectedIds] = useState([]);
   const [ottList, setOttList] = useState([]);
@@ -37,6 +38,7 @@ export default function Ott() {
 
   const getDramaLike = async () => {
     try {
+      setLoading(true);
       // const res = await axiosInstance.get(`/api/api/v1/drama/like`);
       const res = await fetch(`/api/api/v1/drama/like`, {
         headers: {
@@ -48,6 +50,8 @@ export default function Ott() {
       setDramaList(json);
     } catch (e) {
       console.log(e);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -76,16 +80,29 @@ export default function Ott() {
       <span>
         현재 {selectedIds.length}개 선택 / {MAX_SELECT_CNT}
       </span>
-      <div className="grid grid-cols-3 justify-items-center gap-y-[16px]">
-        {dramaList.map((v) => (
-          <DramaRecommItem
-            key={v.dramaId}
-            item={v}
-            selectedIds={selectedIds}
-            setSelectedIds={setSelectedIds}
-          />
-        ))}
+      <div className={`w-full flex justify-center`}>
+        {loading && (
+          <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-brand"></div>
+        )}
       </div>
+      {dramaList.length ? (
+        <div className="grid grid-cols-3 justify-items-center gap-y-[16px]">
+          {dramaList.map((v) => (
+            <DramaRecommItem
+              key={v.dramaId}
+              item={v}
+              selectedIds={selectedIds}
+              setSelectedIds={setSelectedIds}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="pt-[20px] flex justify-center items-center">
+          <p className="leading-[3rem] text-[1.4rem] text-[#7F828C] text-center">
+            아직 찜한 드라마가 없습니다.
+          </p>
+        </div>
+      )}
       <button
         className="py-[10px] px-[16px] bg-brand text-white disabled:bg-slate-300 disabled:text-black rounded-[10px]"
         onClick={handleRecomm}
