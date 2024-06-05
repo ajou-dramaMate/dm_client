@@ -74,7 +74,7 @@ export default function ReviewWrite() {
                   alt="별점"
                   src={
                     v
-                      ? require("@images/star_review-fill-brand.svg")
+                      ? require("@images/star_review-fill-orange.svg")
                       : require("@images/star_review-outline-gray.svg")
                   }
                   width={34}
