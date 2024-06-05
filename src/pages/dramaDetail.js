@@ -81,8 +81,11 @@ export default function DramaDetail() {
     <div className="overflow-y-auto flex flex-col gap-[30px] px-[16px] pt-[50px] pb-[80px]">
       <div className="flex gap-[20px]">
         <div className="flex flex-col gap-[8px]">
-          <div className="w-[150px] h-[210px] bg-slate-200"></div>
-          <span>{detail?.summary}</span>
+          <img
+            alt="포스터"
+            src={`data:image/png;base64,${detail?.image}`}
+            className="w-[150px] h-[210px] bg-slate-200"
+          />
         </div>
         <div className="flex flex-col gap-[8px]">
           <div className="flex flex-col gap-[4px]">
@@ -101,6 +104,7 @@ export default function DramaDetail() {
           </div>
         </div>
       </div>
+      <span className="text-justify">{detail?.summary}</span>
 
       <div className="flex flex-col gap-[4px]">
         {detail?.review.map((v) => (
