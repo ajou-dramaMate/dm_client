@@ -4,21 +4,32 @@ import DramaItem from "@components/dramaItem";
 import { useEffect, useState } from "react";
 
 export default function My() {
+  const [loading, setLoading] = useState(false);
   const [dramaList, setDramaList] = useState([]);
 
   const getDramaLike = async () => {
     try {
-      const res = await axiosInstance.get(`/api/api/v1/drama/like`);
+      setLoading(true);
+      // const res = await axiosInstance.get(`/api/api/v1/drama/like`);
+      const res = await fetch(`/api/api/v1/drama/like`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      });
       console.log(`drama like`, res);
-      setDramaList(res.data);
+      const json = await res.json();
+      setDramaList(json);
     } catch (e) {
       console.log(e);
+    } finally {
+      setLoading(false);
     }
   };
 
   useEffect(() => {
     getDramaLike();
   }, []);
+
   return (
     <div className="overflow-y-auto flex flex-col gap-[30px] px-[16px] pt-[50px] pb-[80px]">
       <span className="text-[1.8rem] font-b">00님 안녕하세요.</span>
@@ -36,11 +47,24 @@ export default function My() {
 
       <div className="flex flex-col gap-[8px]">
         <span className="font-m">나의 찜 목록</span>
-        <div className="grid grid-cols-3 justify-items-center gap-y-[16px]">
-          {dramaList.map((v) => (
-            <DramaItem key={`${Math.random()}`} item={v} />
-          ))}
+        <div className={`w-full flex justify-center`}>
+          {loading && (
+            <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-brand"></div>
+          )}
         </div>
+        {dramaList.length ? (
+          <div className="grid grid-cols-3 justify-items-center gap-y-[16px]">
+            {dramaList.map((v) => (
+              <DramaItem key={`${Math.random()}`} item={v} />
+            ))}
+          </div>
+        ) : (
+          <div className="pt-[50px] flex justify-center items-center">
+            <p className="leading-[3rem] text-[1.4rem] text-[#7F828C] text-center">
+              아직 찜한 드라마가 없습니다.
+            </p>
+          </div>
+        )}
       </div>
 
       <div className="absolute bottom-0 left-0 w-full z-10">
