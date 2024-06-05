@@ -1,71 +1,5 @@
-﻿{
+{
   "data": [
-    {
-      "title": "겨울연가",
-      "member": "배용준, 최지우, 박용하, 박솔미 外",
-      "summary": "결혼을 앞둔 한 여자에게 죽은 첫 사랑과 닮은 한 남자가 나타나면서 벌어지는 일들을 그린 드라마",
-      "year": 2002,
-      "age": 15,
-      "information": "20부작",
-      "genre": "ROMANCE, ACADEMY, OFFICE, FAMILY",
-      "image": "wintersonata.png",
-      "ott": "WAVVE, WATCHA"
-    },
-    {
-      "title": "대장금",
-      "member": "이영애, 지진희, 양미경, 홍리나 外",
-      "summary": "주인공 장금이가 궁궐에 들어가 최초 어의녀가 되기까지의 과정을 그려낸 드라마",
-      "year": 2003,
-      "age": 15,
-      "information": "54부작",
-      "genre": "HISTORICAL",
-      "image": "jitp.png",
-      "ott": "WAVVE, WATCHA"
-    },
-    {
-      "title": "풀하우스",
-      "member": "정지훈, 송혜교, 김성수, 한다감 外",
-      "summary": "원래 집주인이었던 지은이 사기를 당해 영재에게 자신이 살던 풀하우스를 내주게 되면서 일어나는 일들을 그린 드라마",
-      "year": 2004,
-      "age": 15,
-      "information": "16부작",
-      "genre": "ROMANCE",
-      "image": "fullhouse.png",
-      "ott": "WAVVE, WATCHA"
-    },
-    {
-      "title": "발리에서 생긴 일",
-      "member": "하지원, 조인성, 소지섭, 박예진, 신이 外",
-      "summary": "네 젊은이들의 치명적이고 슬픈 사랑이야기를 그린 드라마",
-      "year": 2004,
-      "age": 15,
-      "information": "20부작",
-      "genre": "DRAMA, MELO",
-      "image": "bali.png",
-      "ott": "WAVVE, WATCHA"
-    },
-    {
-      "title": "파리의 연인",
-      "member": "김정은, 박신양, 이동건, 김서형 外",
-      "summary": "까칠한 재벌 2세 남자와 평범한 여자의 사랑을 담은 드라마",
-      "year": 2004,
-      "age": 15,
-      "information": "20부작",
-      "genre": "MELO, ROMANCE",
-      "image": "paris.png",
-      "ott": "WAVVE, WATCHA"
-    },
-    {
-      "title": "미안하다, 사랑한다",
-      "member": "소지섭, 임수정, 서지영, 정경호, 최여진 外",
-      "summary": "어린 시절 호주에 입양된 후 거리의 아이로 자란 무혁이 은채를 만나 죽음도 두렵지 않은 지독한 사랑을 하는 이야기",
-      "year": 2004,
-      "age": 15,
-      "information": "16부작",
-      "genre": "DRAMA, MELO, ROMANCE",
-      "image": "sorryloveyou.png",
-      "ott": "WAVVE, WATCHA"
-    },
     {
       "title": "주몽",
       "member": "송일국, 한혜진, 김승수, 전광렬 外",
@@ -89,61 +23,6 @@
       "ott": "COUPANGPLAY, WAVVE, WATCHA"
     },
     {
-      "title": "경성스캔들",
-      "member": "강지환, 한지민, 류진, 한고은 外",
-      "summary": "근대적인 윤리관 속에 서구문물이 유입되던 1930년 경성을 배경으로 독립운동과 모던 로맨스를 그린 드라마",
-      "year": 2007,
-      "age": 15,
-      "information": "16부작",
-      "genre": "MELO, ROMANCE, COMEDY, PERIOD",
-      "image": "gsscandle.png",
-      "ott": "WAVVE"
-    },
-    {
-      "title": "커피프린스 1호점",
-      "member": "공유, 윤은혜, 이선균, 채정안 外",
-      "summary": "남자 행세를 하는 스물네 살의 여주인공과 정략결혼을 피하기 위해 동성애자인 척하는 남자 주인공이 커피프린스 1호점에서 펼치는 사랑이야기",
-      "year": 2007,
-      "age": 15,
-      "information": "17부작",
-      "genre": "ROMANCE, COMEDY",
-      "image": "coffeeprince.png",
-      "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
-      "title": "에덴의 동쪽",
-      "member": "송승헌, 연정훈, 한지혜, 이다해, 박해진, 이연희 外",
-      "summary": "동시에 같은 병원에서 태어난 두 남자의 엇갈린 운명과 복수를 다룬 드라마",
-      "year": 2008,
-      "age": 15,
-      "information": "56부작",
-      "genre": "PERIOD, FAMILY, ROMANCE",
-      "image": "west.png",
-      "ott": "WAVVE"
-    },
-    {
-      "title": "온에어",
-      "member": "김하늘, 박용하, 이범수, 송윤아 外",
-      "summary": "드라마 PD와 작가, 연기자, 매니저들의 삶과 사랑 이야기를 다룬 드라마",
-      "year": 2008,
-      "age": 15,
-      "information": "21부작",
-      "genre": "DRAMA, ROMANCE",
-      "image": "onair.png",
-      "ott": "WATCHA"
-    },
-    {
-      "title": "선덕여왕",
-      "member": "이요원, 고현정, 박예진, 엄태웅 外",
-      "summary": "한민족 최초의 여왕인 신라 선덕여왕의 일대기를 그린 드라마",
-      "year": 2009,
-      "age": 15,
-      "information": "62부작",
-      "genre": "HISTORICAL",
-      "image": "seondeokqueen.png",
-      "ott": "WAVVE, WATCHA"
-    },
-    {
       "title": "꽃보다 남자",
       "member": "구혜선, 이민호, 김현중, 김범, 김준 外",
       "summary": "사립고에 다니게 된 세탁소집 딸과 부잣집 도련님들의 사랑을 그린 드라마",
@@ -153,28 +32,6 @@
       "genre": "ROMANCE, COMEDY, ACADEMY, FAMILY",
       "image": "boysoverflower.png",
       "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
-      "title": "성균관 스캔들",
-      "member": "박유천, 박민영, 송중기, 유아인 外",
-      "summary": "조선시대 금녀의 공간 성균관에서 벌어지는 청춘 4인방의 성장 멜로 드라마",
-      "year": 2010,
-      "age": 15,
-      "information": "20부작",
-      "genre": "MELO, ROMANCE, COMEDY",
-      "image": "skkscandle.png",
-      "ott": "NETFLIX, TVING, COUPANGPLAY, WATCHA"
-    },
-    {
-      "title": "공부의 신",
-      "member": "김수로, 배두나, 오윤아, 유승호, 고아성, 이현우, 지연, 이찬호 外",
-      "summary": "문제아들의 명문대에 가기 위한 고군분투를 그린 드라마",
-      "year": 2010,
-      "age": 15,
-      "information": "16부작",
-      "genre": "ACADEMY, ROMANCE",
-      "image": "godofstudy.png",
-      "ott": "COUPANGPLAY, WAVVE"
     },
     {
       "title": "시크릿 가든",
@@ -196,39 +53,6 @@
       "information": "16부작",
       "genre": "ROMANCE, COMEDY, FANTASY",
       "image": "mygirlfriendninetailfox.png",
-      "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
-      "title": "제빵왕 김탁구",
-      "member": "윤시윤, 유진, 이영아, 주원 外",
-      "summary": "김탁구가 제빵왕이 되기 위해 성장해나가는 과정을 그린 드라마",
-      "year": 2010,
-      "age": 15,
-      "information": "30부작",
-      "genre": "DRAMA",
-      "image": "breadmasterktg.png",
-      "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
-      "title": "보스를 지켜라",
-      "member": "지성, 최강희, 김재중, 왕지혜 外",
-      "summary": "88만 원 세대 노은설이 취업을 하기 위해 고군분투하다 재벌 3세 불량보스 차지헌을 만나 우연찮게 비서가 되는 과정을 코믹하게 그려낸 드라마",
-      "year": 2011,
-      "age": 15,
-      "information": "18부작",
-      "genre": "ROMANCE, COMEDY",
-      "image": "protecttheboss.png",
-      "ott": "WAVVE"
-    },
-    {
-      "title": "뿌리깊은 나무",
-      "member": "한석규, 장혁, 신세경 外",
-      "summary": "조선 세종 시대, 한글 창제의 핵심이었던 집현전 학자들이 하나 둘 살해당한다. 세종은 훈민정음 반포를 막으려는 비밀 조직 밀본의 존재를 알게 되고, 이들을 추적하기 시작한다",
-      "year": 2011,
-      "age": 15,
-      "information": "24부작",
-      "genre": "HISTORICAL, MYSTERY, DRAMA",
-      "image": "deeprootedtree.png",
       "ott": "COUPANGPLAY, WAVVE, WATCHA"
     },
     {
@@ -254,61 +78,6 @@
       "ott": "WAVVE, WATCHA"
     },
     {
-      "title": "해를 품은 달",
-      "member": "한가인, 김수현, 정일우, 김민서 外",
-      "summary": "조선의 세자 이훤은 우연한 기회로 입궐한 홍문관 대제학의 여식 연우를 만나 사랑에 빠지지만, 둘의 인연은 엇나간다",
-      "year": 2012,
-      "age": 15,
-      "information": "20부작",
-      "genre": "HISTORICAL, ROMANCE",
-      "image": "tmets.png",
-      "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
-      "title": "옥탑방 왕세자",
-      "member": "박유천, 한지민, 이태성, 정유미, 이태리, 최우식, 정석원 外",
-      "summary": "사랑하는 세자빈을 잃은 왕세자 이각이 300년 후로 날아와 전생에서 못다한 여인과의 사랑을 이룬다는 내용을 담은 타임슬립 판타지 드라마",
-      "year": 2012,
-      "age": 15,
-      "information": "20부작",
-      "genre": "ROMANCE, COMEDY, FANTASY",
-      "image": "princeinrooftop.png",
-      "ott": "WAVVE"
-    },
-    {
-      "title": "더킹 투하츠",
-      "member": "하지원, 이승기, 이윤지, 조정석, 윤제문 外",
-      "summary": "제멋대로인 남한 왕자 재하와 북한 특수부대 여자 장교 항아가 서로에 대한 편견과 세상의 불신, 방해를 딛고 사랑에 빠지는 이야기를 담은 휴먼 블랙 로맨스 코미디",
-      "year": 2012,
-      "age": 15,
-      "information": "20부작",
-      "genre": "MELO, ROMANCE",
-      "image": "twoheart.png",
-      "ott": "WAVVE, WATCHA"
-    },
-    {
-      "title": "신사의 품격",
-      "member": "장동건, 김하늘, 김수로, 김민종, 이종혁, 윤세아, 윤진이 外",
-      "summary": "사랑과 이별, 성공과 좌절을 경험하고 세상 어떤 일에도 미혹되지 않는 불혹을 넘긴 꽃중년 남자 4명이 펼치는 로맨틱 멜로 드라마",
-      "year": 2012,
-      "age": 15,
-      "information": "20부작",
-      "genre": "ROMANCE, COMEDY",
-      "image": "agd.png",
-      "ott": "TVING, WAVVE"
-    },
-    {
-      "title": "아름다운 그대에게",
-      "member": "설리, 민호, 이현우, 김지원, 서준영, 강하늘, 황광희 外",
-      "summary": "남장 미소녀가 남자 체고에 위장전학 오면서 벌어지는 좌충우돌 생존기를 그린 드라마",
-      "year": 2012,
-      "age": 15,
-      "information": "16부작",
-      "genre": "ACADEMY, ROMANCE, YOUTH",
-      "image": "tobeautifulyou.png",
-      "ott": "WAVVE"
-    },
-    {
       "title": "응답하라 1997",
       "member": "정은지, 서인국, 신소율, 은지원, 이호원, 이시언 外",
       "summary": "HOT와 젝스키스로 대변된 90년대를 배경으로, 오빠들에 미쳐있던 여고생과 다섯 친구들의 감성 복고 드라마",
@@ -331,39 +100,6 @@
       "ott": "WAVVE, WATCHA"
     },
     {
-      "title": "너의 목소리가 들려",
-      "member": "이보영, 이종석, 윤상현, 이다희 外",
-      "summary": "속물 국선전담변호사 장혜성과 사람의 마음을 읽는 신비의 초능력 소년 박수하, 바른 생활 사나이 차관우가 만나며 벌어지는 사건들을 흥미진진하게 그린 드라마",
-      "year": 2013,
-      "age": 15,
-      "information": "18부작",
-      "genre": "FANTASY, MYSTERY, DRAMA, COMEDY, COURT",
-      "image": "hearingyourvoice.png",
-      "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
-      "title": "최고다 이순신",
-      "member": "아이유, 조정석, 고주원, 이미숙, 이지훈 外",
-      "summary": "백수에 사기까지 당한 막내딸 이순신. 그녀를 만나러 가던 아버지가 사고로 죽게 되자 순신은 자기 탓을 하며 절망한다. 한편, 유명 기획사 사장 준호는 순신에게 찾아가 배우 캐스팅을 제안한다.",
-      "year": 2013,
-      "age": 15,
-      "information": "50부작",
-      "genre": "DRAMA",
-      "image": "lssbest.png",
-      "ott": "WAVVE, WATCHA"
-    },
-    {
-      "title": "굿 닥터",
-      "member": "주원, 문채원, 주상욱, 김민서 外",
-      "summary": "레지던트 1년 차 박시온의 소아외과 의사 성장기. 병원 이사진은 자폐 병력이 있는 그를 반대하지만, 시온의 재능을 알아본 최원장은 자신의 원장직을 걸고 시온을 임시채용할 것을 제안한다.",
-      "year": 2013,
-      "age": 15,
-      "information": "20부작",
-      "genre": "DRAMA, MEDICAL",
-      "image": "gooddoctor.png",
-      "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
       "title": "별에서 온 그대",
       "member": "전지현, 김수현, 박해진, 유인나, 신성록 外",
       "summary": "400년 전 지구에 떨어진 외계남 도민준과 왕싸가지 한류여신 톱스타 천송이의 기적과도 같은 달콤 발랄 로맨스",
@@ -373,17 +109,6 @@
       "genre": "ROMANCE, COMEDY, FANTASY, HISTORICAL",
       "image": "mlfts.png",
       "ott": "NETFLIX, COUPANGPLAY, WAVVE, WATCHA, UPLUS"
-    },
-    {
-      "title": "학교 2013",
-      "member": "장나라, 최다니엘, 이종석, 박세영, 정우연, 김우빈 外",
-      "summary": "학교를 중심으로 일어나는 다양한 문제들을 그린 청소년 드라마",
-      "year": 2013,
-      "age": 15,
-      "information": "16부작",
-      "genre": "ACADEMY, FRIENDSHIP, YOUTH, GROWTH",
-      "image": "school2013.png",
-      "ott": "WAVVE, WATCHA"
     },
     {
       "title": "상속자들",
@@ -408,28 +133,6 @@
       "ott": "COUPANGPLAY, WAVVE, WATCHA"
     },
     {
-      "title": "여왕의 교실",
-      "member": "고현정, 김향기, 천보근, 김새론, 서신애 外",
-      "summary": "까탈스럽고 차가운 성격의 여교사가 초등학교 담임선생님으로 부임한 뒤 벌어지는 에피소드를 담은 드라마",
-      "year": 2013,
-      "age": 12,
-      "information": "16부작",
-      "genre": "DRAMA, ACADEMY",
-      "image": "queensclass.png",
-      "ott": "WAVVE"
-    },
-    {
-      "title": "그 겨울, 바람이 분다",
-      "member": "조인성, 송혜교, 김범, 정은지 外",
-      "summary": "유년시절 부모로부터 버려지고 첫사랑에 실패한 후 의미 없는 삶을 사는 남자와 부모의 이혼과 오빠와의 결별, 갑자기 찾아온 시각 장애로 외롭고 고단한 삶을 사는 여자가 만나 차갑고 외로웠던 그들의 삶에서 희망과 진정한 사랑의 의미를 찾아가는 이야기",
-      "year": 2013,
-      "age": 15,
-      "information": "16부작",
-      "genre": "DRAMA, MELO, ROMANCE, COMEDY, HUMAN",
-      "image": "winterwindblow.png",
-      "ott": "NETFLIX, WAVVE"
-    },
-    {
       "title": "응답하라 1994",
       "member": "고아라, 성동일, 이일화, 정우, 유연석, 김성균, 손호준, 차선우, 민도희 外",
       "summary": "1994년을 배경으로, 지방 사람들의 눈물겨운 상경기와 농구대잔치, 서태지와 아이들 등의 사회적 이슈를 담은 드라마",
@@ -439,17 +142,6 @@
       "genre": "PERIOD, ROMANCE, FAMILY, DAILY",
       "image": "reply1994.png",
       "ott": "TVING, DISNEYPLUS"
-    },
-    {
-      "title": "응급남녀",
-      "member": "송지효, 최진혁, 이필모, 최여진, 클라라 外",
-      "summary": "6년 전에 이혼했던 원수 같은 부부 오진희, 오창민이 병원 응급실에서 늦깎이 인턴으로 다시 만나 펼치는 로맨틱 코미디 드라마",
-      "year": 2014,
-      "age": 15,
-      "information": "21부작",
-      "genre": "ROMANCE, COMEDY",
-      "image": "emergencycouple.png",
-      "ott": "TVING"
     },
     {
       "title": "피노키오",
@@ -463,61 +155,6 @@
       "ott": "WAVVE, WATCHA"
     },
     {
-      "title": "괜찮아, 사랑이야",
-      "member": "조인성, 공효진, 성동일, 이광수 外",
-      "summary": "인기 추리소설 작가이자 라디오 DJ 재열과 대학병원 정신과 의사 해수. 만나기만 하면 티격태격하던 두 사람이 한집에 살게 되면서 변하기 시작한다.",
-      "year": 2014,
-      "age": 15,
-      "information": "16부작",
-      "genre": "ROMANCE, COMEDY, MELO",
-      "image": "itsokaylove.png",
-      "ott": "TVING, WAVVE, DISNEYPLUS"
-    },
-    {
-      "title": "아홉수 소년",
-      "member": "최로운, 육성재, 김영광, 오정세 外",
-      "summary": "아홉수에 빠진 '9세, 19세, 29세, 39세' 한지붕 네 남자의 될 것도 안되는 운 사나운 로맨스를 그린 드라마",
-      "year": 2014,
-      "age": 15,
-      "information": "14부작",
-      "genre": "ROMANCE, DRAMA, COMEDY",
-      "image": "ninthboys.png",
-      "ott": "TVING"
-    },
-    {
-      "title": "냄새를 보는 소녀",
-      "member": "박유천, 신세경, 남궁민, 윤진서 外",
-      "summary": "3년 전 바코드 살인사건으로 여동생을 잃은 무감각적인 한 남자와 같은 사고를 당하고 기적적으로 살아났지만 이전의 기억을 모두 잃은 초감각 소유자인 한 여자의 이야기",
-      "year": 2015,
-      "age": 15,
-      "information": "14부작",
-      "genre": "ROMANCE, COMEDY, FANTASY",
-      "image": "girlwhoseesmell.png",
-      "ott": "WAVVE"
-    },
-    {
-      "title": "발칙하게 고고",
-      "member": "정은지, 이원근, 채수빈, 차학연 外",
-      "summary": "고등학교 내 두 동아리의 통폐합이라는 해프닝을 통해 위선과 부조리로 가득하고 생존을 위한 경쟁만을 강조하는 학교 안의 풍경을 그린 드라마",
-      "year": 2015,
-      "age": 15,
-      "information": "12부작",
-      "genre": "ACADEMY, ROMANCE, COMEDY, FRIENDSHIP",
-      "image": "chearupgogo.png",
-      "ott": "WAVVE"
-    },
-    {
-      "title": "마을-아치아라의 비밀",
-      "member": "문근영, 육성재, 신은경, 온주완, 장희진 外",
-      "summary": "할머니의 유품을 정리하던 소윤은 가족의 죽음에 대한 편지를 발견한다. 발신인을 찾아 아치아라라는 마을에 오게 된 소윤은 호숫가에서 시신을 발견하고, 평화롭던 마을은 쑥대밭이 된다.",
-      "year": 2015,
-      "age": 15,
-      "information": "16부작",
-      "genre": "THRILLER, HORROR, FANTASY, SUSPENSE",
-      "image": "villagesecret.png",
-      "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
       "title": "응답하라 1988",
       "member": "혜리, 안재홍, 류준열, 고경표, 박보검, 이동휘 外",
       "summary": "쌍팔년도 쌍문동, 한 골목 다섯 가족의 왁자지껄 코믹 가족극",
@@ -529,28 +166,6 @@
       "ott": "NETFLIX, TVING, DISNEYPLUS"
     },
     {
-      "title": "두번째 스무살",
-      "member": "최지우, 이상윤, 최원영 外",
-      "summary": "꽃다운 19세에 덜컥 애 엄마가 되어 살아온 지 20년째인 그녀 '하노라' 앞에 스무 살 캠퍼스 라이프가 난생처음 펼쳐진다. 15학번 새내기 '하노라'와 갓 스물이 된 친구들의 멘붕과 소통을 그린 청춘응답프로젝",
-      "year": 2015,
-      "age": 15,
-      "information": "16부작",
-      "genre": "CAMPUS, ROMANCE",
-      "image": "secondtwenty.png",
-      "ott": "TVING"
-    },
-    {
-      "title": "가면",
-      "member": "수애, 주지훈, 연정훈, 유인영 外",
-      "summary": "실제 자신을 숨기고 가면을 쓴 채 살아가는 사람들의 얘기를 다룬 드라마",
-      "year": 2015,
-      "age": 15,
-      "information": "20부작",
-      "genre": "MELO, ROMANCE, SUSPENSE",
-      "image": "mask.png",
-      "ott": "WAVVE"
-    },
-    {
       "title": "프로듀사",
       "member": "차태현, 공효진, 김수현, 아이유 外",
       "summary": "힘들게 쌓아온 스펙대신 웃음을 만드는 것과 수려한 말빨이 필요한 KBS 예능국. 뮤직뱅크 피디 예진과 1박 2일 피디 준모, 신입 피디 승찬, 가수 신디는 그곳에서 살아남아야 한다.",
@@ -560,28 +175,6 @@
       "genre": "COMEDY, ROMANCE, DRAMA",
       "image": "producers.png",
       "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
-      "title": "후아유 - 학교 2015",
-      "member": "김소현, 남주혁, 육성재 外",
-      "summary": "KBS2 '학교' 시리즈의 2015년 버전. 하루아침에 인생이 바뀐 열여덟 살 여고생을 주인공으로 학생들이 겪는 솔직하고 다양한 감성을 담아낼 청소년 드라마",
-      "year": 2015,
-      "age": 15,
-      "information": "16부작",
-      "genre": "ACADEMY, ROMANCE, COMEDY, GROWTH",
-      "image": "whoareyou_school2015.png",
-      "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
-      "title": "하이드 지킬, 나",
-      "member": "현빈, 한지민, 성준, 혜리 外",
-      "summary": "한 남자의 전혀 다른 두 인격과 사랑에 빠진 한 여자의 삼각로맨스를 다룬 로맨틱 코미디 드라마",
-      "year": 2015,
-      "age": 15,
-      "information": "20부작",
-      "genre": "ROMANCE, COMEDY, PSYCHOLOGICAL",
-      "image": "hjm.png",
-      "ott": "WAVVE"
     },
     {
       "title": "킬미, 힐미",
@@ -606,17 +199,6 @@
       "ott": "COUPANGPLAY, WAVVE, WATCHA"
     },
     {
-      "title": "오 나의 귀신님",
-      "member": "박보영, 조정석, 임주환, 김슬기 外",
-      "summary": "내 안에 음탕한 처녀 귀신이 산다!' 음탕한 처녀 귀신이 빙의 된 소심한 주방 보조 '나봉선'과 자뻑 스타 셰프 '강선우'가 펼치는 응큼발칙 빙의 로맨스",
-      "year": 2015,
-      "age": 15,
-      "information": "16부작",
-      "genre": "ROMANCE, COMEDY, FANTASY",
-      "image": "ohmyghost.png",
-      "ott": "TVING, DISNEYPLUS"
-    },
-    {
       "title": "태양의 후예",
       "member": "송중기, 송혜교, 진구, 김지원 外",
       "summary": "낯선 땅 극한의 환경 속에서 사랑과 성공을 꿈꾸는 젊은 군인과 의사들을 통해 삶의 가치를 담아낼 블록버스터급 휴먼 멜로 드라마",
@@ -625,50 +207,6 @@
       "information": "16부작",
       "genre": "DRAMA, ROMANCE, COMEDY, ACTION, MEDICAL, HUMAN, POLITICAL",
       "image": "dofs.png",
-      "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
-      "title": "싸우자 귀신아",
-      "member": "옥택연, 김소현, 권율 外",
-      "summary": "귀신이 보이는 눈을 떼기 위해 귀신을 때려잡아 돈을 버는 복학생 퇴마사 박봉팔과 수능을 못 치른 한으로 귀신이 된 여고생 귀신 김현지가 동고동락하며 함께 귀신을 쫓는 등골 오싹 퇴마 어드벤처",
-      "year": 2016,
-      "age": 15,
-      "information": "16부작",
-      "genre": "FANTASY, HORROR, ROMANCE, COMEDY",
-      "image": "fightghost.png",
-      "ott": "TVING"
-    },
-    {
-      "title": "구르미 그린 달빛",
-      "member": "박보검, 김유정, 진영, 채수빈 外",
-      "summary": "한 나라의 세자가, 내시와 사랑에 빠졌다! 츤데레 왕세자 이영과 남장 내시 홍라온의 예측불허 궁중위장 로맨스",
-      "year": 2016,
-      "age": 15,
-      "information": "18부작",
-      "genre": "HISTORICAL, ROMANCE",
-      "image": "loveinmoonlight.png",
-      "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
-      "title": "푸른 바다의 전설",
-      "member": "전지현, 이민호 外",
-      "summary": "우리나라 최초의 야담집인 어우야담에 나오는 인어 이야기를 모티브로 한 판타지 로맨스 드라마",
-      "year": 2016,
-      "age": 15,
-      "information": "20부작",
-      "genre": "FANTASY, ROMANCE, COMEDY",
-      "image": "tlobs.png",
-      "ott": "NETFLIX, COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
-      "title": "화랑",
-      "member": "박서준, 고아라, 박형식, 서예지 外",
-      "summary": "1,500년 전 신라 수도 서라벌을 누비던 화랑들의 열정과 사랑, 성장을 그리는 청춘 드라마",
-      "year": 2016,
-      "age": 15,
-      "information": "20부작",
-      "genre": "HISTORICAL, ROMANCE",
-      "image": "hwarang.png",
       "ott": "COUPANGPLAY, WAVVE, WATCHA"
     },
     {
@@ -681,28 +219,6 @@
       "genre": "FANTASY, ROMANCE, COMEDY",
       "image": "goblin.png",
       "ott": "NETFLIX, TVING, DISNEYPLUS"
-    },
-    {
-      "title": "역도요정 김복주",
-      "member": "이성경, 남주혁, 경수진, 이재윤 外",
-      "summary": "바벨만 들던 스물한 살 역도선수 김복주에게 닥친 폭풍 같은 첫사랑을 그린 감성 청춘 드라마",
-      "year": 2016,
-      "age": 15,
-      "information": "16부작",
-      "genre": "CAMPUS, ROMANCE, COMEDY, MELO",
-      "image": "wfkbj.png",
-      "ott": "WAVVE, WATCHA"
-    },
-    {
-      "title": "The K2",
-      "member": "지창욱, 송윤아, 임윤아, 조성하 外",
-      "summary": "전쟁 용병 출신의 보디가드 K2와 그를 고용한 대선 후보의 아내, 그리고 세상과 떨어져 사는 소녀! 로열패밀리를 둘러싼 은밀하고 강렬한 보디가드 액션 드라마",
-      "year": 2016,
-      "age": 15,
-      "information": "16부작",
-      "genre": "DRAMA, ACTION, COMEDY, CRIME, MELO, ROMANCE, THRILLER",
-      "image": "thek2.png",
-      "ott": "TVING"
     },
     {
       "title": "질투의 화신",
@@ -718,46 +234,13 @@
     {
       "title": "또! 오해영",
       "member": "에릭, 서현진, 전혜빈 外",
-      "summary": "\"\"\"모든 것은 오해로 시작되었다!\"\" '오해영'이라는 동명이인의 두 여자와 그들 사이에서 미래를 보기 시작한 남자 '박도경'이 미필적 고의로 서로의 인생에 얽혀가는 동명 오해 로맨스\"",
+      "summary": "모든 것은 오해로 시작되었다!\" '오해영'이라는 동명이인의 두 여자와 그들 사이에서 미래를 보기 시작한 남자 '박도경'이 미필적 고의로 서로의 인생에 얽혀가는 동명 오해 로맨스",
       "year": 2016,
       "age": 15,
       "information": "18부작",
       "genre": "COMEDY, ROMANCE",
       "image": "againohy.png",
       "ott": "TVING, DISNEYPLUS"
-    },
-    {
-      "title": "치즈인더트랩",
-      "member": "박해진, 김고은, 서강준, 이성경, 남주혁, 박민지 外",
-      "summary": "\"\"\"니들은 몰라도 난 안다고. 저 가짜 웃음 뒤에 숨겨진 선배의 또 다른 얼굴을...\"\" 달콤한 미소 뒤 위험한 본성을 숨긴 완벽 스펙남과 유일하게 그의 본모습을 꿰뚫어본 비범한 여대생의 숨막히는 로맨스릴러\"",
-      "year": 2016,
-      "age": 15,
-      "information": "16부작",
-      "genre": "ROMANCE, THRILLER",
-      "image": "cheeseinthetrap.png",
-      "ott": "TVING, DISNEYPLUS"
-    },
-    {
-      "title": "함부로 애틋하게",
-      "member": "김우빈, 배수지, 임주환, 임주은 外",
-      "summary": "어린 시절 가슴 아픈 악연으로 헤어졌던 두 남녀가 안하무인 슈퍼갑 톱스타와 비굴하고 속물적인 슈퍼을 다큐 PD로 다시 만나 그려가는 까칠하고 애틋한 사랑이야기",
-      "year": 2016,
-      "age": 15,
-      "information": "20부작",
-      "genre": "MELO",
-      "image": "uncontrollablyfond.png",
-      "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
-      "title": "낭만닥터 김사부",
-      "member": "한석규, 유연석, 서현진 外",
-      "summary": "지방의 초라한 돌담병원을 배경으로 벌어지는 '괴짜 천재 의사' 김사부와 열정이 넘치는 젊은 의사 강동주, 윤서정이 펼치는 '진짜 닥터' 이야기",
-      "year": 2016,
-      "age": 15,
-      "information": "20부작",
-      "genre": "MEDICAL, HUMAN, DRAMA, ROMANCE",
-      "image": "romanticdoctorkim.png",
-      "ott": "COUPANGPLAY, WAVVE, WATCHA"
     },
     {
       "title": "달의 연인 - 보보경심 려",
@@ -771,17 +254,6 @@
       "ott": "NETFLIX, COUPANGPLAY, WAVVE, WATCHA"
     },
     {
-      "title": "내일 그대와",
-      "member": "신민아, 이제훈 外",
-      "summary": "외모, 재력, 인간미까지 갖춘 완벽 스펙의 시간 여행자 '유소준'과 그의 삶에 유일한 예측불허 '송마린'의 피할 수 없는 시간여행 로맨스",
-      "year": 2016,
-      "age": 15,
-      "information": "16부작",
-      "genre": "FANTASY, ROMANCE, COMEDY",
-      "image": "tomorrowwithyou.png",
-      "ott": "TVING"
-    },
-    {
       "title": "군주 - 가면의 주인",
       "member": "유승호, 김소현, 엘, 윤소희 外",
       "summary": "조선 팔도의 물을 사유해 강력한 부와 권력을 얻은 조직 편수회와 맞서 싸우는 왕세자의 의로운 사투를 그린 드라마",
@@ -791,28 +263,6 @@
       "genre": "HISTORICAL, POLITICAL, ROMANCE",
       "image": "king.png",
       "ott": "WAVVE"
-    },
-    {
-      "title": "학교 2017",
-      "member": "김세정, 김정현, 장동윤, 한선화, 한주완 外",
-      "summary": "KBS2 '학교' 시리즈의 2017년 버전. 학생들이 겪는 솔직하고 다양한 감성을 담아낼 청소년 드라마",
-      "year": 2017,
-      "age": 15,
-      "information": "16부작",
-      "genre": "ACADEMY, GROWTH, ROMANCE",
-      "image": "school2017.png",
-      "ott": "WAVVE, WATCHA"
-    },
-    {
-      "title": "당신이 잠든 사이에",
-      "member": "이종석, 배수지, 이상엽, 정혜인 外",
-      "summary": "누군가에 닥칠 불행한 사건, 사고를 꿈으로 미리 볼 수 있는 여자와 그 꿈이 현실이 되는 것을 막기 위해 고군분투하는 검사의 이야기",
-      "year": 2017,
-      "age": 15,
-      "information": "32부작",
-      "genre": "MELO, FANTASY, CRIME, THRILLER",
-      "image": "whenyousleeping.png",
-      "ott": "COUPANGPLAY, WAVVE, WATCHA"
     },
     {
       "title": "언터처블",
@@ -826,61 +276,6 @@
       "ott": "TVING"
     },
     {
-      "title": "세상에서 가장 아름다운 이별",
-      "member": "원미경, 유동근, 김영옥, 최지우, 최민호 外",
-      "summary": "21년 만에 리메이크되는 노희경 작가의 대표작 중 하나로, 가족을 위해 평생을 희생해 온 중년 주부가 말기 암 진단을 받고 가족들과 이별을 준비하는 내용을 담은 드라마",
-      "year": 2017,
-      "age": 15,
-      "information": "4부작",
-      "genre": "HUMAN, FAMILY, DRAMA",
-      "image": "mostbeautifulgoodbye.png",
-      "ott": "TVING"
-    },
-    {
-      "title": "이번생은 처음이라",
-      "member": "이민기, 정소민, 이솜, 김가은, 박병은, 김민석 外",
-      "summary": "집 있는 달팽이가 세상 제일 부러운 '홈리스' 윤지호와 현관만 내 집인 '하우스푸어' 집주인 남세희가 한집에 살면서 펼쳐지는 수지타산 로맨스",
-      "year": 2017,
-      "age": 15,
-      "information": "16부작",
-      "genre": "ROMANCE, DRAMA, COMEDY",
-      "image": "thelifeisfisrttime.png",
-      "ott": "NETFLIX, TVING, DISNEYPLUS"
-    },
-    {
-      "title": "사랑의 온도",
-      "member": "서현진, 양세종, 김재욱, 조보아, 심희섭 外",
-      "summary": "온라인 채팅으로 시작해 현실에서 만나게 된 드라마 작가 지망생 '제인'과 프렌치 쉐프를 꿈꾸는 '착한 스프' 그리고 다양한 주변 인물들을 통해 피상적인 관계에 길들여져 있는 청춘들의 사랑과 관계를 그린 드라마",
-      "year": 2017,
-      "age": 15,
-      "information": "40부작",
-      "genre": "MELO, ROMANCE, HEALING",
-      "image": "temoflove.png",
-      "ott": "WAVVE, WATCHA"
-    },
-    {
-      "title": "하백의 신부",
-      "member": "신세경, 남주혁, 임주환,정수정, 공명 外",
-      "summary": "만화 <하백의 신부> 스핀오프! 2017년, 인간 세상에 내려온 물의 신(神) '하백'과 대대손손 신의 종으로 살 팔자로, 극 현실주의자인척하는 여의사 '소아'의 신(神)므파탈 코믹 판타지 로맨스",
-      "year": 2017,
-      "age": 15,
-      "information": "16부작",
-      "genre": "ROMANCE, FANTASY, COMEDY",
-      "image": "brideofhabeak.png",
-      "ott": "TVING"
-    },
-    {
-      "title": "수상한 파트너",
-      "member": "지창욱, 남지현, 최태준, 권나라 外",
-      "summary": "기억상실로 결정적인 순간을 무한 반복하는 살인자와의 쫓고 쫓기는 스릴러이자 남녀주인공의 아주 웃기는 로맨틱 코미디",
-      "year": 2017,
-      "age": 15,
-      "information": "40부작",
-      "genre": "ROMANCE, COMEDY, THRILLER, CRIME",
-      "image": "suspiciouspartner.png",
-      "ott": "WAVVE, WATCHA"
-    },
-    {
       "title": "쌈, 마이웨이",
       "member": "박서준, 김지원, 안재홍, 송하윤 外",
       "summary": "세상이 보기엔 부족한 스펙 때문에 마이너 인생을 강요하는 현실 속에서도, 남들이 뭐라던 '마이웨이'를 가려는 마이너리그 청춘들의 골 때리는 성장로맨스를 담은 드라마",
@@ -890,39 +285,6 @@
       "genre": "ROMANCE, COMEDY, YOUTH",
       "image": "sammyway.png",
       "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
-      "title": "힘쎈여자 도봉순",
-      "member": "박보영, 박형식, 김지수, 안우연 外",
-      "summary": "선천적으로 어마무시한 괴력을 타고난 도봉순이 세상 어디에도 본 적 없는 똘끼충만한 안민혁과 정의감에 불타는 인국두를 만나면서 벌어지는 세 남녀의 힘겨루기 로맨스",
-      "year": 2017,
-      "age": 15,
-      "information": "16부작",
-      "genre": "CRIME, ROMANCE, COMEDY",
-      "image": "sgdbs.png",
-      "ott": "NETFLIX, TVING, DISNEYPLUS"
-    },
-    {
-      "title": "고백부부",
-      "member": "장나라, 손호준, 허정민, 한보름, 장기용, 고보결, 이이경, 조혜정 外",
-      "summary": "결혼을 후회하는 부부의 전쟁 같은 리얼 인생 체인지 드라마",
-      "year": 2017,
-      "age": 15,
-      "information": "12부작",
-      "genre": "ROMANCE, COMEDY, FANTASY",
-      "image": "gobackcouple.png",
-      "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
-      "title": "일단 뜨겁게 청소하라!!",
-      "member": "윤근상, 김유정, 송재림 外",
-      "summary": "청결보다 생존이 먼저인 열정 만렙 취준생과 청결이 목숨보다 중요한 꽃미남 청소업체 CEO가 만나 펼치는 완전무결 로맨스",
-      "year": 2018,
-      "age": 15,
-      "information": "16부작",
-      "genre": "MELO, ROMANCE, COMEDY",
-      "image": "cleaninghot.png",
-      "ott": "NETFLIX, TVING"
     },
     {
       "title": "나의 아저씨",
@@ -953,7 +315,7 @@
       "year": 2018,
       "age": 15,
       "information": "20부작",
-      "genre": "CRIME, DRAMA, THRILLER, BLACK_COMEDY, MYSTERY, NOIR, ACADEMY, REVENGE",
+      "genre": "CRIME, THRILLER, MYSTERY, NOIR, ACADEMY, REVENGE, FAMILY",
       "image": "skycastle.png",
       "ott": "NETFLIX, TVING, DISNEYPLUS"
     },
@@ -1074,7 +436,7 @@
       "year": 2019,
       "age": 19,
       "information": "10부작",
-      "genre": "HORROR, THRILLER, NOIR, CRIME, MYSTERY, SUSPENSE, HARD_BOILED, PICARESQUE",
+      "genre": "HORROR, THRILLER, NOIR, CRIME, MYSTERY",
       "image": "strangersfromhell.png",
       "ott": "TVING, DISNEYPLUS"
     },
@@ -1136,7 +498,7 @@
     {
       "title": "동백꽃 필 무렵",
       "member": "공효진, 강하늘 外",
-      "summary": "\"편견에 갇힌 맹수 동백을 깨우는, 촌므파탈 황용식이의 폭격형 로맨스 \"\"사랑하면 다 돼!\"\" 이들을 둘러싼 생활밀착형 치정 로맨스 \"\"사랑 같은 소리하네.\"\"\"",
+      "summary": "편견에 갇힌 맹수 동백을 깨우는, 촌므파탈 황용식이의 폭격형 로맨스 \"사랑하면 다 돼!\" 이들을 둘러싼 생활밀착형 치정 로맨스 \"사랑 같은 소리하네.",
       "year": 2019,
       "age": 15,
       "information": "40부작",
@@ -1261,7 +623,7 @@
       "year": 2020,
       "age": 15,
       "information": "21부작",
-      "genre": "CRIME, THRILLER, NOIR, BLACK_COMEDY, MYSTERY, SUSPENSE, ACTION, MELO",
+      "genre": "CRIME, THRILLER, NOIR, BLACK_COMEDY, MYSTERY, PICARESQUE",
       "image": "penthouse.png",
       "ott": "COUPANGPLAY, WAVVE, WATCHA"
     },
@@ -1409,17 +771,6 @@
       "ott": "WAVVE, WATCHA"
     },
     {
-      "title": "낭만닥터 김사부 2",
-      "member": "한석규, 안효섭, 이성경, 김주헌 外",
-      "summary": "지방의 초라한 돌담병원을 배경으로 벌어지는 '진짜 닥터' 이야기",
-      "year": 2020,
-      "age": 15,
-      "information": "16부작",
-      "genre": "MEDICAL, HUMAN, DRAMA, ROMANCE",
-      "image": "romanticdoctorkim2.png",
-      "ott": "COUPANGPLAY, WAVVE, WATCHA"
-    },
-    {
       "title": "신사와 아가씨",
       "member": "지현우, 이세희, 강은탁, 박하나 外",
       "summary": "자신의 선택에 책임을 다하고 행복을 찾아가는 '아가씨'와 '신사'가 만나면서 벌어지는 파란만장한 이야기",
@@ -1459,7 +810,7 @@
       "year": 2021,
       "age": 19,
       "information": "14부작",
-      "genre": "CRIME, THRILLER, NOIR, BLACK_COMEDY, MYSTERY, SUSPENSE, ACTION, MELO",
+      "genre": "CRIME, THRILLER, NOIR, BLACK_COMEDY, MYSTERY, MELO, PICARESQUE",
       "image": "penthouse2.png",
       "ott": "COUPANGPLAY, WAVVE, WATCHA"
     },
@@ -1470,7 +821,7 @@
       "year": 2021,
       "age": 19,
       "information": "13부작",
-      "genre": "CRIME, THRILLER, NOIR, BLACK_COMEDY, MYSTERY, SUSPENSE, ACTION, MELO",
+      "genre": "CRIME, THRILLER, NOIR, BLACK_COMEDY, MYSTERY, MELO, PICARESQUE",
       "image": "penthouse3.png",
       "ott": "COUPANGPLAY, WAVVE, WATCHA"
     },
@@ -1481,7 +832,7 @@
       "year": 2021,
       "age": 15,
       "information": "20부작",
-      "genre": "CRIME, THRILLER, NOIR, BLACK_COMEDY, ACTION, MELO, PICARESQUE, REVENGE",
+      "genre": "CRIME, THRILLER, NOIR, BLACK_COMEDY, ACTION, PICARESQUE, REVENGE",
       "image": "vincenzo.png",
       "ott": "NETFLIX, TVING"
     },
@@ -1701,7 +1052,7 @@
       "year": 2022,
       "age": 15,
       "information": "12부작",
-      "genre": "CRIME, MYSTERY, THRILLER, NOIR, SUSPENSE, DRAMA, ROMANCE, BLACK_COMEDY",
+      "genre": "CRIME, MYSTERY, THRILLER, NOIR, SUSPENSE, DRAMA, ROMANCE",
       "image": "littlewomen.png",
       "ott": "NETFLIX, TVING"
     },
@@ -1723,7 +1074,7 @@
       "year": 2022,
       "age": 15,
       "information": "16부작",
-      "genre": "FANTASY, ROMANCE, MELO, REVENGE, CRIME, MYSTERY, THRILLER, NOIR",
+      "genre": "FANTASY, ROMANCE, MELO, REVENGE, CRIME, MYSTERY, NOIR",
       "image": "goldspoon.png",
       "ott": "WAVVE, DISNEYPLUS"
     },
@@ -1745,7 +1096,7 @@
       "year": 2022,
       "age": 19,
       "information": "16부작",
-      "genre": "CRIME, DRAMA, THRILLER, NOIR, MYSTERY, SUSPENSE, REVENGE, HUMAN",
+      "genre": "CRIME, DRAMA, THRILLER, NOIR, MYSTERY, SUSPENSE, REVENGE",
       "image": "theglory.png",
       "ott": "NETFLIX"
     },
@@ -1805,17 +1156,6 @@
       "ott": "NETFLIX, TVING, UPLUS"
     },
     {
-      "title": "낭만닥터 김사부 3",
-      "member": "한석규, 안효섭, 이성경 外",
-      "summary": "지방의 초라한 돌담병원을 배경으로 벌어지는 '진짜 닥터' 이야기",
-      "year": 2023,
-      "age": 15,
-      "information": "16부작",
-      "genre": "MEDICAL, HUMAN, DRAMA, ROMANCE",
-      "image": "romanticdoctorkim3.png",
-      "ott": "WAVVE, DISNEYPLUS"
-    },
-    {
       "title": "어쩌다 마주친, 그대",
       "member": "김동욱, 진기주, 서지혜, 이원정 外",
       "summary": "1987년에 갇혀버린 두 남녀의 이상하고 아름다운 시간 여행기",
@@ -1851,7 +1191,7 @@
     {
       "title": "이번생도 잘 부탁해",
       "member": "신혜선, 안보현, 하윤경, 안동구 外",
-      "summary": "\"\"\"19회차 인생 로맨스의 최대 라이벌은 18회차의 나?\"\" 전생을 기억하는 ‘반지음’이 꼭 만나야만 하는 '문서하'를 찾아가면서 펼쳐지는 저돌적 환생 로맨스\"",
+      "summary": "19회차 인생 로맨스의 최대 라이벌은 18회차의 나?\" 전생을 기억하는 ‘반지음’이 꼭 만나야만 하는 '문서하'를 찾아가면서 펼쳐지는 저돌적 환생 로맨스",
       "year": 2023,
       "age": 15,
       "information": "12부작",
@@ -1954,7 +1294,7 @@
       "year": 2023,
       "age": 19,
       "information": "8부작",
-      "genre": "FANTASY, THRILLER, NOIR, FAMILY, CRIME, REVENGE, HORROR, HUMAN",
+      "genre": "FANTASY, THRILLER, NOIR, CRIME, REVENGE, GROWTH, ENSEMBLE_CAST",
       "image": "soondie.png",
       "ott": "TVING"
     },
@@ -1976,7 +1316,7 @@
       "year": 2024,
       "age": 15,
       "information": "16부작",
-      "genre": "ROMANCE, COMEDY, FANTASY, CRIME, REVENGE, OFFICE, FAMILY",
+      "genre": "ROMANCE, COMEDY, FANTASY, CRIME, REVENGE, OFFICE, SUSPENSE",
       "image": "marrywithmyhusband.png",
       "ott": "TVING"
     },
@@ -2005,7 +1345,7 @@
     {
       "title": "눈물의 여왕",
       "member": "김수현, 김지원, 박성훈, 곽동연, 이주빈 外",
-      "summary": "\"\"\"세기의 결혼... 세기의 전쟁?\"\" 퀸즈 그룹 재벌 3세, 백화점의 여왕 '홍해인'. 용두리 이장 아들, 슈퍼마켓 왕자 '백현우'. 3년차 부부의 아찔한 위기와 기적처럼 다시 시작되는 사랑 이야기\"",
+      "summary": "세기의 결혼... 세기의 전쟁?\" 퀸즈 그룹 재벌 3세, 백화점의 여왕 '홍해인'. 용두리 이장 아들, 슈퍼마켓 왕자 '백현우'. 3년차 부부의 아찔한 위기와 기적처럼 다시 시작되는 사랑 이야기",
       "year": 2024,
       "age": 15,
       "information": "16부작",
@@ -2016,11 +1356,11 @@
     {
       "title": "선재 업고 튀어",
       "member": "변우석, 김혜윤, 송건희, 이승협 外",
-      "summary": "\"삶의 의지를 놓아버린 순간, 자신을 살게 해줬던 유명 아티스트 \"\"류선재\"\". 그의 죽음으로 절망했던 열성팬 \"\"임솔\"\"이 최애를 살리기 위해 시간을 거슬러 2008년으로 돌아간다! 다시 살게 된 열아홉, 목표는 최애 류선재를 지키는 것!\"",
+      "summary": "삶의 의지를 놓아버린 순간, 자신을 살게 해줬던 유명 아티스트 \"류선재\". 그의 죽음으로 절망했던 열성팬 \"임솔\"이 최애를 살리기 위해 시간을 거슬러 2008년으로 돌아간다! 다시 살게 된 열아홉, 목표는 최애 류선재를 지키는 것!",
       "year": 2024,
       "age": 15,
       "information": "16부작",
-      "genre": "FANTASY, ROMANCE, COMEDY, YOUTH, HEALING, FAMILY, THRILLER, CRIME",
+      "genre": "FANTASY, ROMANCE, COMEDY, YOUTH, HEALING, THRILLER, CRIME",
       "image": "lovelyrunner.png",
       "ott": "TVING"
     }
