@@ -48,7 +48,7 @@ export default function DramaDetail() {
   const { dramaId, like } = router.query;
   console.log(dramaId);
   const [detail, setDetail] = useState(null);
-  const [isLike, setIsLike] = useState(like);
+  const [isLike, setIsLike] = useState(like === "false" ? false : true);
 
   const handleLike = async () => {
     setIsLike((prev) => !prev);
@@ -109,7 +109,7 @@ export default function DramaDetail() {
           />
         </div>
 
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between w-full">
           <div className="flex flex-col gap-[8px]">
             <div className="flex flex-col gap-[4px]">
               <span className="font-b text-[1.8rem]">{detail?.title}</span>
