@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function OttItem({ item, i }) {
   return (
     <div className="flex gap-[8px] items-center">
@@ -7,9 +9,17 @@ export default function OttItem({ item, i }) {
         {i + 1}
       </span>
       <div className="flex gap-[18px] items-center">
-        <img
+        <Image
           alt="포스터"
-          src={`data:image/png;base64,${item.ott_image}`}
+          src={
+            i == 0
+              ? `data:image/png;base64,${item.ott_image}`
+              : i == 1
+              ? require("../../public/images/WAVVE.png")
+              : require("../../public/images/NETFLIX.png")
+          }
+          width={170}
+          height={50}
           className="w-[170px] h-[50px] bg-slate-200"
         />
         <div className="flex flex-col gap-[4px]">
