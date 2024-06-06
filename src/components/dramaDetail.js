@@ -1,5 +1,4 @@
 import Image from "next/image";
-import BottomTabNav from "@components/bottomTabNav";
 import ReviewItem from "@components/reviewItem";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -43,13 +42,17 @@ export const GENRE_OPTION = {
   ENSEMBLE_CAST: "앙상블 캐스트",
 };
 
-export default function DramaDetail() {
+export default function DramaDetail({
+  item,
+  setIsShowModal,
+  isShowModalReview,
+  setIsShowModalReview,
+}) {
   const [loading, setLoading] = useState(false);
-  const router = useRouter();
-  const { dramaId, like } = router.query;
-  console.log(dramaId);
   const [detail, setDetail] = useState(null);
-  const [isLike, setIsLike] = useState(like === "false" ? false : true);
+  const { dramaId, like } = item;
+  const [isLike, setIsLike] = useState(like);
+  const router = useRouter();
 
   const handleLike = async () => {
     setIsLike((prev) => !prev);
@@ -89,17 +92,17 @@ export default function DramaDetail() {
 
   useEffect(() => {
     getDramaDetail();
-  }, []);
+  }, [isShowModalReview]);
 
   return (
-    <div className="overflow-y-auto flex flex-col gap-[20px] px-[16px] pb-[80px]">
+    <div className="h-full bg-white overflow-y-auto flex flex-col gap-[20px] px-[16px] pb-[80px]">
       <div className="py-[10px]">
         <Image
           alt="뒤로가기"
           src={require("@images/chevron_left-gray.svg")}
           width={24}
           height={24}
-          onClick={() => router.back()}
+          onClick={() => setIsShowModal(false)}
           className="cursor-pointer"
         />
       </div>
@@ -206,12 +209,7 @@ export default function DramaDetail() {
         <div className="bg-white pt-[8px] pb-[18px] px-[16px]">
           <button
             className="w-full bg-brand h-[43px] rounded-[10px] flex gap-[8px] items-center justify-center"
-            onClick={() =>
-              router.push({
-                pathname: "/reviewWrite",
-                query: { dramaId, title: detail?.title },
-              })
-            }
+            onClick={() => setIsShowModalReview(true)}
           >
             <Image
               alt=""

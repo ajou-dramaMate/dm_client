@@ -1,13 +1,15 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import OttItem from "@components/ottItem";
 import BottomTabNav from "@components/bottomTabNav";
 
-export default function OttRecomm() {
+export default function OttRecomm({
+  dramaId1,
+  dramaId2,
+  dramaId3,
+  setIsShowModal,
+}) {
   const [loadingRecomm, setLoadingRecomm] = useState(true);
-  const router = useRouter();
-  const { dramaId1, dramaId2, dramaId3 } = router.query;
   const [ottList, setOttList] = useState([]);
 
   const handleRecomm = async () => {
@@ -36,14 +38,14 @@ export default function OttRecomm() {
   }, []);
 
   return (
-    <div className="overflow-y-auto flex flex-col gap-[20px] px-[16px] pb-[80px] bg-[#EFF1F4]">
+    <div className="h-full overflow-y-auto flex flex-col gap-[20px] px-[16px] pb-[80px] bg-[#EFF1F4]">
       <div className="py-[10px]">
         <Image
           alt="뒤로가기"
           src={require("@images/chevron_left-gray.svg")}
           width={24}
           height={24}
-          onClick={() => router.back()}
+          onClick={() => setIsShowModal(false)}
           className="cursor-pointer"
         />
       </div>
