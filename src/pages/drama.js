@@ -1,6 +1,8 @@
 import axiosInstance from "@api/axiosInstance";
 import BottomTabNav from "@components/bottomTabNav";
+import DramaDetail from "@components/dramaDetail";
 import DramaItem from "@components/dramaItem";
+import ReviewWrite from "@components/reviewWrite";
 import useIntersect from "@hooks/useIntersect";
 import { useEffect, useRef, useState } from "react";
 
@@ -42,6 +44,9 @@ export default function Drama() {
   const [isLastPage, setIsLastPage] = useState(false);
   const page = useRef(0);
   const [dramaList, setDramaList] = useState([]);
+  const [isShowModal, setIsShowModal] = useState(false);
+  const [selectedDrama, setSelectedDrama] = useState(null);
+  const [isShowModalReview, setIsShowModalReview] = useState(false);
 
   const getDrama = async () => {
     try {
@@ -126,7 +131,12 @@ export default function Drama() {
       {dramaList.length ? (
         <div className="grid grid-cols-3 justify-items-center gap-y-[16px]">
           {dramaList.map((v) => (
-            <DramaItem key={v.dramaId} item={v} />
+            <DramaItem
+              key={v.dramaId}
+              item={v}
+              setIsShowModal={setIsShowModal}
+              setSelectedDrama={setSelectedDrama}
+            />
           ))}
         </div>
       ) : (
@@ -141,6 +151,26 @@ export default function Drama() {
           <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-brand"></div>
         )}
       </div>
+
+      {isShowModal && (
+        <div className="absolute bottom-0 left-0 w-full h-full z-20">
+          <DramaDetail
+            item={selectedDrama}
+            setIsShowModal={setIsShowModal}
+            isShowModalReview={isShowModalReview}
+            setIsShowModalReview={setIsShowModalReview}
+          />
+        </div>
+      )}
+
+      {isShowModalReview && (
+        <div className="absolute bottom-0 left-0 w-full h-full z-20">
+          <ReviewWrite
+            item={selectedDrama}
+            setIsShowModalReview={setIsShowModalReview}
+          />
+        </div>
+      )}
 
       <div className="absolute bottom-0 left-0 w-full z-10">
         <BottomTabNav />

@@ -2,9 +2,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-export default function ReviewWrite() {
-  const router = useRouter();
-  const { dramaId, title } = router.query;
+export default function ReviewWrite({ item, setIsShowModalReview }) {
+  const { dramaId, title } = item;
   const [selectedStar, setSelectedStar] = useState(
     Array.from({ length: 5 }, () => false)
   );
@@ -29,7 +28,7 @@ export default function ReviewWrite() {
       const res = await fetch(`/api/api/v1/review`, {
         method: "POST",
         body: JSON.stringify({
-          dramaId: +dramaId,
+          dramaId,
           contents,
           star: selectedStar.filter((v) => v).length,
         }),
@@ -40,7 +39,7 @@ export default function ReviewWrite() {
       });
       console.log(`post review`, res);
       alert("리뷰가 등록되었습니다.");
-      router.back();
+      setIsShowModalReview(false);
     } catch (e) {
       console.log(e);
     }
@@ -54,7 +53,7 @@ export default function ReviewWrite() {
           src={require("@images/chevron_left-gray.svg")}
           width={24}
           height={24}
-          onClick={() => router.back()}
+          onClick={() => setIsShowModalReview(false)}
           className="cursor-pointer"
         />
       </div>
