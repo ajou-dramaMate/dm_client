@@ -73,14 +73,16 @@ export default function PostDetail() {
           className="cursor-pointer"
         />
       </div>
-      <div>
-        <span className="font-b break-words">{post.title}</span>
-        <div className="flex gap-[8px] text-[1.4rem] text-slate-500">
-          <span>{post.name}</span>
-          <span>{post.date}</span>
+      <div className="flex flex-col gap-[8px]">
+        <div className="flex justify-between gap-[8px] items-center text-[1.4rem]">
+          <span className="font-b text-[#3B3F4A]">{post.name}</span>
+          <span className="text-[#9DA0A8] text-[1.3rem]">{post.date}</span>
         </div>
+        <span className="font-b break-words">{post.title}</span>
+        <span className="pb-[30px] break-words text-justify text-[#3B3F4A] text-[1.5rem]">
+          {post.contents}
+        </span>
       </div>
-      <span className="pb-[30px] break-words">{post.contents}</span>
 
       <div className="flex flex-col gap-[4px]">
         {comments.map((comment) => (
