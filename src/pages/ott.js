@@ -4,6 +4,7 @@ import OttItem from "@components/ottItem";
 import { useEffect, useState } from "react";
 import DramaRecommItem from "@components/dramaRecommItem";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export const MAX_SELECT_CNT = 3;
 export const OTT_DATA = [
@@ -17,29 +18,9 @@ export const OTT_DATA = [
 
 export default function Ott() {
   const [loading, setLoading] = useState(false);
-  const [loadingRecomm, setLoadingRecomm] = useState(false);
   const [dramaList, setDramaList] = useState([]);
   const [selectedIds, setSelectedIds] = useState([]);
-  const [ottList, setOttList] = useState([]);
-
-  const handleRecomm = async () => {
-    if (selectedIds.length < 3) {
-      alert("보고 싶은 드라마를 3개 선택해 주세요.");
-      return;
-    }
-    try {
-      setLoadingRecomm(true);
-      const res = await axiosInstance.get(
-        `/api/api/v1/ott/${selectedIds[0]}/${selectedIds[1]}/${selectedIds[2]}`
-      );
-      console.log(`ott recomm`, res);
-      setOttList(res.data);
-    } catch (e) {
-      console.log(e);
-    } finally {
-      setLoadingRecomm(false);
-    }
-  };
+  const router = useRouter();
 
   const getDramaLike = async () => {
     try {
@@ -110,29 +91,31 @@ export default function Ott() {
       )}
       <button
         className="w-full bg-brand h-[43px] rounded-[10px] flex gap-[8px] items-center justify-center disabled:bg-slate-300 shrink-0"
-        onClick={handleRecomm}
+        onClick={() => {
+          if (selectedIds.length < 3) {
+            alert("보고 싶은 드라마를 3개 선택해 주세요.");
+            return;
+          }
+          router.push({
+            pathname: "/ottRecomm",
+            query: {
+              dramaId1: selectedIds[0],
+              dramaId2: selectedIds[1],
+              dramaId3: selectedIds[2],
+            },
+          });
+        }}
         disabled={selectedIds.length < MAX_SELECT_CNT}
       >
-        {loadingRecomm ? (
-          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-white"></div>
-        ) : (
-          <>
-            <Image
-              alt=""
-              src={require("@images/recomm-white.svg")}
-              width={20}
-              height={20}
-              priority
-            />
-            <span className="text-white font-sb">OTT 추천받기</span>
-          </>
-        )}
+        <Image
+          alt=""
+          src={require("@images/recomm-white.svg")}
+          width={20}
+          height={20}
+          priority
+        />
+        <span className="text-white font-sb">OTT 추천받기</span>
       </button>
-      <div className="flex flex-col gap-[10px]">
-        {ottList.map((v) => (
-          <OttItem key={`${Math.random()}`} item={v} />
-        ))}
-      </div>
 
       <div className="absolute bottom-0 left-0 w-full z-10">
         <BottomTabNav />
