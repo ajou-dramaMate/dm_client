@@ -88,7 +88,11 @@ export default function NewPost() {
         <div className="flex justify-end">
           <button
             className="bg-brand text-white rounded-[10px] py-[10px] px-[16px] disabled:bg-slate-300"
-            disabled={content.length === 0 || title === 0 || (recruit && (!ottCheckbox || !selecteNumber))}
+            disabled={
+              content.length === 0 ||
+              title === 0 ||
+              (recruit && (!ottCheckbox || !selecteNumber))
+            }
             onClick={handleSubmit}
           >
             등록
@@ -119,7 +123,7 @@ export default function NewPost() {
           />
         </label>
         {recruit && (
-          <div className="flex flex-col gap-[8px] bg-slate-300 py-[10px] px-[16px]">
+          <div className="flex flex-col gap-[10px] rounded-[10px] bg-slate-200 py-[25px] px-[20px]">
             <div>
               <span>OTT 이름</span>
               <ul className="p-[16px] list-disc">
@@ -138,25 +142,23 @@ export default function NewPost() {
                 ))}
               </ul>
             </div>
-            <div>
+            <div className="relative">
               <span>모집 인원</span>
               <button
                 type="button"
                 onClick={toggleDropdown}
-                className="py-[3px] px-[5px]"
+                className="mt-[5px] p-[16px] bg-white border border-gray-300 rounded-[5px] flex items-center justify-between w-full"
               >
-                {`: ${
-                  selecteNumber ? `${selecteNumber} 명` : "인원을 정해 주세요"
-                }`}
-                <span>{toggleOpen ? "▲" : "▼"}</span>
+                {selecteNumber ? `${selecteNumber} 명` : "인원을 정해 주세요"}
+                <span className="ml-2">{toggleOpen ? "▲" : "▼"}</span>
               </button>
               {toggleOpen && (
-                <ul className="mt-[4px] pl-[16px] list-disc">
+                <ul className="absolute w-full bg-white rounded-[5px] border border-gray-300">
                   {numbers.map((number) => (
                     <li
                       key={number}
                       onClick={() => handleNumberSelect(number)}
-                      className="cursor-pointer"
+                      className="py-[6px] px-[8px] hover:bg-gray-100 cursor-pointer"
                     >
                       {number} 명
                     </li>
