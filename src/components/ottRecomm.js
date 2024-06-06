@@ -50,17 +50,33 @@ export default function OttRecomm({
         />
       </div>
 
-      {loadingRecomm ? (
-        <div className="w-full pt-[250px] flex justify-center items-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-brand" />
+      <div className="h-[500px] flex flex-col gap-[20px] bg-white rounded-[10px] p-[16px]">
+        <div className="flex flex-col gap-[10px] items-center">
+          <span className="font-m text-[1.5rem]">나를 위한 최적의 OTT는?</span>
+          <div className="flex flex-col gap-[6px] font-b items-center">
+            <span>{ottList?.[0]?.dramas[0]}</span>
+            <span>{ottList?.[0]?.dramas[1]}</span>
+            <span>{ottList?.[1]?.dramas[0]}</span>
+          </div>
+          <div className="flex flex-col text-[#9DA0A8] text-[1.3rem]">
+            <span>·</span>
+            <span>·</span>
+            <span>·</span>
+          </div>
         </div>
-      ) : (
-        <div className="flex flex-col gap-[10px] bg-white rounded-[10px] p-[16px]">
-          {ottList.map((v) => (
-            <OttItem key={`${Math.random()}`} item={v} />
-          ))}
-        </div>
-      )}
+
+        {loadingRecomm ? (
+          <div className="w-full h-full flex justify-center items-center">
+            <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-brand" />
+          </div>
+        ) : (
+          <div className="flex flex-col gap-[40px]">
+            {ottList.map((v, i) => (
+              <OttItem key={`${Math.random()}`} item={v} i={i} />
+            ))}
+          </div>
+        )}
+      </div>
 
       <div className="absolute bottom-0 left-0 w-full z-10">
         <BottomTabNav />
