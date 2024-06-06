@@ -15,7 +15,7 @@ export default function Community() {
       setRecruitButton(!recruitButton);
     }
   };
-  
+
   const handleRecruitButton = () => {
     if (!recruitButton && communityButton) {
       setRecruitButton(true);
@@ -68,19 +68,19 @@ export default function Community() {
       </div>
 
       <div className="flex flex-col gap-[7px] pt-[20px]">
-        {posts.filter(post => {
-          if (communityButton && recruitButton) {
-            return true;
-          }
-          else if (communityButton) {
-            return !post.totalRecruit;
-          }
-          else if (recruitButton) {
-            return post.totalRecruit;
-          }
-        }).map((post) => (
-          <PostItem key={post.communityId} post={post} />
-        ))}
+        {posts
+          .filter((post) => {
+            if (communityButton && recruitButton) {
+              return true;
+            } else if (communityButton) {
+              return !post.totalRecruit;
+            } else if (recruitButton) {
+              return post.totalRecruit;
+            }
+          })
+          .map((post) => (
+            <PostItem key={post.communityId} post={post} />
+          ))}
       </div>
 
       <div className="absolute bottom-0 left-0 w-full z-10">

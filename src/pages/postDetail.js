@@ -63,22 +63,13 @@ export default function PostDetail() {
   return (
     <div className="overflow-y-auto flex flex-col gap-[30px] px-[16px] pt-[50px] pb-[80px]">
       <div>
-        <span className="font-b">{post.title}</span>
-        <div className="flex gap-[7px] text-[1.4rem] font-m">
+        <span className="font-b break-words">{post.title}</span>
+        <div className="flex gap-[8px] text-[1.4rem] text-slate-500">
           <span>{post.name}</span>
           <span>{post.date}</span>
-          {post.spoiler && <span>스포일러</span>}
         </div>
-        {post.totalRecruit && (
-          <div className="flex gap-[7px] text-[1.4rem] font-m">
-            <span>{post.ott}</span>
-            <span>
-              {post.currentRecruit}/{post.totalRecruit}
-            </span>
-          </div>
-        )}
       </div>
-      <span>{post.contents}</span>
+      <span className="pb-[30px] break-words">{post.contents}</span>
 
       <div className="flex flex-col gap-[4px]">
         {comments.map((comment) => (
@@ -87,11 +78,11 @@ export default function PostDetail() {
       </div>
 
       <form
-        className="relative flex flex-col gap-[4px] py-[10px] pl-[16px] pr-[50px] bg-slate-300"
+        className="relative flex flex-col gap-[4px] py-[10px] pl-[16px] pr-[50px] bg-brand rounded-[4px]"
         onSubmit={handleCommentSubmit}
       >
         <input
-          className="py-[3px] px-[5px]"
+          className="py-[3px] px-[5px] rounded-[7px]"
           type="text"
           value={commentText}
           onChange={handleCommentText}
@@ -99,7 +90,7 @@ export default function PostDetail() {
         />
         <button
           type="submit"
-          className="absolute top-1/2 -translate-y-1/2 right-[16px]"
+          className="absolute top-1/2 -translate-y-1/2 right-[16px] bg-brand text-white py-[3px] px-[7px]"
           onChange={handleCommentSubmit}
           disabled={commentText.length === 0}
         >
