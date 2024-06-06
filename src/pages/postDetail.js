@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import BottomTabNav from "@components/bottomTabNav";
@@ -61,15 +62,27 @@ export default function PostDetail() {
   };
 
   return (
-    <div className="overflow-y-auto flex flex-col gap-[30px] px-[16px] pt-[50px] pb-[80px]">
-      <div>
-        <span className="font-b break-words">{post.title}</span>
-        <div className="flex gap-[8px] text-[1.4rem] text-slate-500">
-          <span>{post.name}</span>
-          <span>{post.date}</span>
-        </div>
+    <div className="overflow-y-auto flex flex-col gap-[20px] px-[16px] pb-[80px]">
+      <div className="py-[10px]">
+        <Image
+          alt="뒤로가기"
+          src={require("@images/chevron_left-gray.svg")}
+          width={24}
+          height={24}
+          onClick={() => router.back()}
+          className="cursor-pointer"
+        />
       </div>
-      <span className="pb-[30px] break-words">{post.contents}</span>
+      <div className="flex flex-col gap-[8px]">
+        <div className="flex justify-between gap-[8px] items-center text-[1.4rem]">
+          <span className="font-b text-[#3B3F4A]">{post.name}</span>
+          <span className="text-[#9DA0A8] text-[1.3rem]">{post.date}</span>
+        </div>
+        <span className="font-b break-words">{post.title}</span>
+        <span className="pb-[30px] break-words text-justify text-[#3B3F4A] text-[1.5rem]">
+          {post.contents}
+        </span>
+      </div>
 
       <div className="flex flex-col gap-[4px]">
         {comments.map((comment) => (

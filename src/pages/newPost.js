@@ -1,3 +1,4 @@
+import Image from "next/image";
 import BottomTabNav from "@components/bottomTabNav";
 import { useState } from "react";
 import { useRouter } from "next/router";
@@ -83,7 +84,18 @@ export default function NewPost() {
   };
 
   return (
-    <div className="overflow-y-auto flex flex-col gap-[30px] px-[16px] pt-[50px] pb-[80px]">
+    <div className="overflow-y-auto flex flex-col gap-[20px] px-[16px] pb-[80px]">
+      <div className="py-[10px]">
+        <Image
+          alt="뒤로가기"
+          src={require("@images/chevron_left-gray.svg")}
+          width={24}
+          height={24}
+          onClick={() => router.back()}
+          className="cursor-pointer"
+        />
+      </div>
+
       <form className="flex flex-col gap-[30px] px-[16px]">
         <div className="flex justify-end">
           <button
