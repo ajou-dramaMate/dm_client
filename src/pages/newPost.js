@@ -100,11 +100,7 @@ export default function NewPost() {
         <div className="flex justify-end">
           <button
             className="bg-brand text-white rounded-[10px] py-[10px] px-[16px] disabled:bg-slate-300"
-            disabled={
-              content.length === 0 ||
-              title === 0 ||
-              (recruit && (!ottCheckbox || !selecteNumber))
-            }
+            disabled={content.length === 0 || title === 0}
             onClick={handleSubmit}
           >
             등록
