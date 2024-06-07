@@ -17,7 +17,7 @@ export default function Home() {
       const { accessToken, refreshToken } = json;
       localStorage.setItem("accessToken", accessToken);
       localStorage.setItem("refreshToken", refreshToken);
-      alert("로그인에 성공하였습니다!");
+      // alert("로그인에 성공하였습니다!");
       router.push("/drama");
     } catch (e) {
       console.log(e);
@@ -26,12 +26,23 @@ export default function Home() {
 
   const handleLoginKakao = async () => {
     try {
-      const res = await axiosInstance.get(`/api/api/v1/login`);
-      console.log(`login`, res);
+      // const res = await axiosInstance.get(`/api/api/v1/login`);
+      // console.log(`login`, res);
+      const res = await fetch(`/api/api/v1/login`);
+      const json = await res.json();
+      console.log(`test-login`, json);
+      // location.href =
+      //   "https://kauth.kakao.com/oauth/authorize?" +
+      //   "client_id=" +
+      //   "0c7c2cdd1b8a462192f2836bd8359733" +
+      //   "&redirect_uri=" +
+      //   "http://localhost:8080/api/v1/login/oauth2/code/kakao" +
+      //   "&response_type=code";
       // const { accessToken, refreshToken } = res.data;
       // localStorage.setItem("accessToken", accessToken);
       // localStorage.setItem("refreshToken", refreshToken);
       // alert("로그인에 성공하였습니다!");
+      // location.href = "http://localhost:8080/api/v1/login";
     } catch (e) {
       console.log(e);
     }
@@ -43,7 +54,7 @@ export default function Home() {
         <Image
           alt=""
           src={require("@images/logo.svg")}
-          width={150}
+          width={200}
           height={150}
           priority
         />

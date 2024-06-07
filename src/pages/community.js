@@ -5,22 +5,21 @@ import Link from "next/link";
 
 export default function Community() {
   const [posts, setPosts] = useState([]);
-  const [communityButton, setCommunityButton] = useState(true);
-  const [recruitButton, setRecruitButton] = useState(true);
+  const [filterOption, setFilterOption] = useState("all");
 
   const handleCommunityButton = () => {
-    if (recruitButton && !communityButton) {
-      setCommunityButton(true);
+    if (filterOption === "community") {
+      setFilterOption("all");
     } else {
-      setRecruitButton(!recruitButton);
+      setFilterOption("community");
     }
   };
 
   const handleRecruitButton = () => {
-    if (!recruitButton && communityButton) {
-      setRecruitButton(true);
+    if (filterOption === "recruit") {
+      setFilterOption("all");
     } else {
-      setCommunityButton(!communityButton);
+      setFilterOption("recruit");
     }
   };
 
@@ -45,7 +44,7 @@ export default function Community() {
       <div className="flex gap-[16px]">
         <button
           className={`${
-            communityButton ? "bg-brand" : "bg-slate-300"
+            filterOption === "community" ? "bg-brand" : "bg-slate-300"
           } text-white rounded-[10px] py-[10px] px-[16px]`}
           onClick={handleCommunityButton}
         >
@@ -53,7 +52,7 @@ export default function Community() {
         </button>
         <button
           className={`${
-            recruitButton ? "bg-brand" : "bg-slate-300"
+            filterOption === "recruit" ? "bg-brand" : "bg-slate-300"
           } text-white rounded-[10px] py-[10px] px-[16px]`}
           onClick={handleRecruitButton}
         >
@@ -70,11 +69,11 @@ export default function Community() {
       <div className="flex flex-col gap-[7px] pt-[20px]">
         {posts
           .filter((post) => {
-            if (communityButton && recruitButton) {
+            if (filterOption === "all") {
               return true;
-            } else if (communityButton) {
+            } else if (filterOption === "community") {
               return !post.totalRecruit;
-            } else if (recruitButton) {
+            } else if (filterOption === "recruit") {
               return post.totalRecruit;
             }
           })

@@ -38,7 +38,7 @@ export default function ReviewWrite({ item, setIsShowModalReview }) {
         },
       });
       console.log(`post review`, res);
-      alert("리뷰가 등록되었습니다.");
+      // alert("리뷰가 등록되었습니다.");
       setIsShowModalReview(false);
     } catch (e) {
       console.log(e);

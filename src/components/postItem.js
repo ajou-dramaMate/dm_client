@@ -9,15 +9,18 @@ export default function PostItem({ post }) {
 
           <div className="flex gap-[8px] items-center text-[#3B3F4A] text-[1.3rem]">
             <div className="flex gap-[4px] items-center">
-              {post.spoiler && <span>스포일러 포함</span>}
-              {post.totalRecruit && (
+              {post.spoiler && (
+                <span className="text-[#FF823C]">스포일러 포함</span>
+              )}
+              {post.totalRecruit ? (
                 <div className="flex gap-[4px] items-center font-m">
                   <span>{post.ott}</span>
                   <span>
-                    {post.currentRecruit}/{post.totalRecruit}
+                    {post.currentRecruit === 2 ? 0 : post.currentRecruit}/
+                    {post.totalRecruit}
                   </span>
                 </div>
-              )}
+              ) : null}
             </div>
             <span className="text-[#9DA0A8]">{post.date}</span>
           </div>
